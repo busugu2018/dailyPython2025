@@ -84,3 +84,6 @@ print("Even" if number%2 == 0 else "Odd")
 #Nested if-else statements
 
 
+print(2//4)
+
+print(1//2*3)

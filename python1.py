@@ -33,7 +33,7 @@ print(6 / 3.)
 print(6. / 3)
 print(6. / 3.)
 
-#Integer division (floor division)
+#Integer division (floor division) jhfy
 print(6 // 3)
 print(6 // 3.)
 print(6. // 3)
