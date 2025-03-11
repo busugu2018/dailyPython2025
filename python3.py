@@ -236,6 +236,233 @@ if number > largest_number:
 
 
 
+# ==============================================================# ==============================================================
+
+#3.1.10   LAB   Comparison operators and conditional execution
+
+# n1 = input("Enter input: ")
+# if n1 == "spathiphyllum":
+#     print("No, I want a big Spathiphyllum!")
+# n2 = input("Enter input: ")
+# if n2 == "pelargonium":
+#     print("Spathiphyllum! Not pelargonium!")
+# n3 = input("Enter input: ")
+# if n3 == "Spathiphyllum":
+#     print("Yes - Spathiphyllum is the best plant ever!")
+
+
+
+
+#Actual Answer
+name = input("Enter flower name: ")
+if name == "Spathiphyllum":
+    print("Yes - Spathiphyllum is the best plant ever!")
+elif name == "spathiphyllum":
+    print("No, I want a big Spathiphyllum!")
+else:
+    print("Spathiphyllum! Not", name + "!")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# ==============================================================# ==============================================================
+#3.2.2 An infinite loop
+# while True:
+#     print("I'm stuck inside a loop.")
+
+
+
+
+
+#3.2.2 An infinite loop
+#That example is confusing
+# Store the current largest number here.
+largest_number = -999999999
+ 
+# Input the first value.
+number = int(input("Enter a number or type -1 to stop: "))
+ 
+# If the number is not equal to -1, continue.
+while number != -1:
+    # Is number larger than largest_number?
+    if number > largest_number:
+        # Yes, update largest_number.
+        largest_number = number
+    # Input the next number.
+    number = int(input("Enter a number or type -1 to stop: "))
+ 
+# Print the largest number.
+print("The largest number is:", largest_number)
+
+
+
+
+largest_number = -999999999
+number = int(input("Enter a number or type -1 to stop: "))
+while number != -1:
+    if number > largest_number:
+        largest_number = number
+    number = int(input("Enter a number or type -1 to stop: "))
+print("The largest number is:", largest_number)
+
+
+#smallest Number
+smallest_number = 999999999
+number = int(input("Enter a number or type 1 to stop: "))
+while number != 1:
+    if number < smallest_number:
+        smallest_number = number
+    number = int(input("Enter a number or type 1 to stop: "))
+print("The smallest number is: ", smallest_number)
+
+
+
+
+
+
+
+
+
+
+
+
+# ==============================================================# ==============================================================
+
+
+#3.2.3 The while loop: more examples
+
+
+# A program that reads a sequence of numbers
+# and counts how many numbers are even and how many are odd.
+# The program terminates when zero is entered.
+ 
+odd_numbers = 0
+even_numbers = 0
+ 
+# Read the first number.
+number = int(input("Enter a number or type 0 to stop: "))
+ 
+# 0 terminates execution.
+while number != 0:
+    # Check if the number is odd.
+    if number % 2 == 1:
+        # Increase the odd_numbers counter.
+        odd_numbers += 1
+    else:
+        # Increase the even_numbers counter.
+        even_numbers += 1
+    # Read the next number.
+    number = int(input("Enter a number or type 0 to stop: "))
+ 
+# Print results.
+print("Odd numbers count:", odd_numbers)
+print("Even numbers count:", even_numbers)
+
+
+
+
+#Better version
+oddNumbers = 0 
+evenNumbers = 0 
+number = int(input("Enter a number or type 0 to stop: "))
+
+while number != 0:
+    if number % 2 == 1:
+        oddNumbers += 1
+    else:
+        evenNumbers += 1
+    number = int(input("Enter a number or type 0 to stop: "))
+print("Odd numbers count:", oddNumbers)
+print("Even numbers count:", evenNumbers)
+
+
+
+#counter:
+counter = 5
+while counter != 0:
+    print("Inside the loop.", counter)
+    counter -= 1
+print("Outside the loop.", counter)
+
+
+
+
+
+#3.2.5 Looping your code with for
+#counter:
+for i in range(10):
+    print("The value of i is currently", i)
+
+for i in range(50):
+    print("The value of i is currently", i)
+
+
+for i in range(2, 8):
+    print("The value of i is currently", i)
+
+for counter in range(2, 12):
+    print("Inside the loop.", counter)
+
+for counter in range(2, 8):
+    print("Inside the loop.", counter)
+
+
+# ==============================================================# ==============================================================
+
+
+#3.2.8 The break and continue statements
+
+# break - example
+print("The break instruction: ")
+for i in range(1, 16):
+    if i == 13:
+        break
+    print("Inside the loop. ", i)
+print("Outside the loop.")
+
+
+# continue - example
+
+print("\nThe continue instruction: ")
+for i in range(1, 6):
+    if i == 3:
+        continue
+    print("Inside the loop. ", i)
+print("Outside the loop. ")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# ==============================================================# ==============================================================
+
+#3.2.10   LAB   The continue statement – the Ugly Vowel Eater
 
 
 
@@ -262,6 +489,7 @@ if number > largest_number:
 
 
 
+# ==============================================================# ==============================================================
 
 
 
@@ -288,18 +516,391 @@ if number > largest_number:
 
 
 
+# ==============================================================# ==============================================================
+
+#3.3.2 Logical expressions
 
 
 
 
 
-print(2//4)
-
-print(1//2*3)
 
 
-n = int(input("Enter the number: "))
-print("True")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# ==============================================================# ==============================================================
+#3.3.3 Logical values vs. single bits#
+
+i = 1
+j = not not i
+print(j)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# ==============================================================# ==============================================================
+#3.3.4 Bitwise operators
+
+
+
+i	            00000000000000000000000000001111
+j	            00000000000000000000000000010110
+bit = i & j	    00000000000000000000000000000110
+bit = i | j     000000000000000000000000000
+~i
+~j
+
+
+
+
+
+
+
+
+
+# Operators in Python are special symbols or keywords used to perform operations on operands (values or variables). They enable various functionalities, from basic arithmetic to complex logical comparisons and data manipulation. Here's an overview of common Python operators:
+# Arithmetic Operators:
+
+
+# Used for mathematical calculations.
+# +: Addition (e.g., x + y)
+# -: Subtraction (e.g., x - y)
+# *: Multiplication (e.g., x * y)
+# /: Division (e.g., x / y)
+
+
+# %: Modulus (remainder of division, e.g., x % y)
+# **: Exponentiation (e.g., x ** y)
+# //: Floor division (division that rounds down to the nearest integer, e.g., x // y)
+# Assignment Operators:
+# Used to assign values to variables.
+# =: Assign (e.g., x = 5)
+# +=: Add and assign (e.g., x += 3 is equivalent to x = x + 3)
+# -=: Subtract and assign (e.g., x -= 3 is equivalent to x = x - 3)
+# *=, /=, %=, **=, //= : Similar to += and -=, but for other arithmetic operations.
+# Comparison Operators:
+# Used to compare two values.
+# ==: Equal to (e.g., x == y)
+# !=: Not equal to (e.g., x != y)
+# >: Greater than (e.g., x > y)
+# <: Less than (e.g., x < y)
+# >=: Greater than or equal to (e.g., x >= y)
+# <=: Less than or equal to (e.g., x <= y)
+# Logical Operators:
+# Used to combine conditional statements.
+# and: Returns True if both operands are True
+# or: Returns True if at least one operand is True
+# not: Returns True if the operand is False, and vice versa
+# Bitwise Operators:
+# Used to perform operations on individual bits of data.
+# &: AND
+# |: OR
+# ^: XOR
+# ~: NOT
+# <<: Left shift
+# >>: Right shift
+# Membership Operators:
+# Used to test if a sequence is present in an object.
+# in: Returns True if a sequence is found in the object
+# not in: Returns True if a sequence is not found in the object
+# Identity Operators:
+# Used to compare the objects, not if they are equal, but if they are actually the same object, with the same memory location.
+# is: Returns True if both variables are the same object
+# is not: Returns True if both variables are not the same object
+# It's important to understand operator precedence, which determines the order in which operations are performed. Parentheses can be used to override the default precedence.
+# Introduction to Python. What is Python Programming Language? | by ...
+# We cannot use a keyword as a variable name, function name or any other identifier. They are used to define the syntax and structur...
+
+
+
+
+
+
+
+# ==============================================================# ==============================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# ==============================================================# ==============================================================
+#3.3.6 Binary left shift and binary right shift
+
+var = 17
+var_right = var >> 1
+var_left = var << 2
+print(var, var_left, var_right)
+
+# Note:
+
+# 17 >> 1 → 17 // 2 (17 floor-divided by 2 to the power of 1) → 8 
+# (shifting to the right by one bit is the same as integer division by two)
+
+# 17 << 2 → 17 * 4 (17 multiplied by 2 to the power of 2) → 68 
+# (shifting to the left by two bits is the same as integer multiplication
+#  by four)
+
+
+
+
+
+# Priority	Operator	
+# 1	        ~, +, -	unary
+# 2	        **	
+# 3	        *, /, //, %	
+# 4	        +, -	binary
+# 5	        <<, >>	
+# 6	        <, <=, >, >=	
+# 7	        ==, !=	
+# 8	        &	
+# 9	        |	
+# 10	    =, +=, -=, *=, /=, %=, &=, ^=, |=, >>=, <<=	
+
+
+
+
+
+
+# ==============================================================# ==============================================================
+# 3.3.7 SECTION SUMMARY
+# 1. Python supports the following logical operators:
+
+# and → if both operands are true, the condition is true, e.g., (True and True) is True,
+# or → if any of the operands are true, the condition is true, e.g., (True or False) is True,
+# not → returns false if the result is true, and returns true if the result is false, e.g., not True is False.
+# 2. You can use bitwise operators to manipulate single bits of data. The following sample data:
+
+# x = 15, which is 0000 1111 in binary,
+# y = 16, which is 0001 0000 in binary.
+# will be used to illustrate the meaning of bitwise operators in Python. Analyze the examples below:
+
+# & does a bitwise and, e.g., x & y = 0, which is 0000 0000 in binary,
+# | does a bitwise or, e.g., x | y = 31, which is 0001 1111 in binary,
+# ˜  does a bitwise not, e.g., ˜ x = 240*, which is 1111 0000 in binary,
+# ^ does a bitwise xor, e.g., x ^ y = 31, which is 0001 1111 in binary,
+# >> does a bitwise right shift, e.g., y >> 1 = 8, which is 0000 1000 in binary,
+# << does a bitwise left shift, e.g., y << 3 = 128, which is 1000 0000 in binary.
+# * -16 (decimal from signed 2's complement) -- read more about the Two's complement operation.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# ==============================================================# ==============================================================
+#3.3.8 SECTION QUIZ
+
+x = 1
+y = 0
+ 
+z = ((x == y) and (x == y)) or not(x == y)
+print(not(z))
+
+
+
+
+
+
+x = 4
+y = 1
+ 
+a = x & y
+b = x | y
+c = ~x  # tricky!
+d = x ^ 5
+e = x >> 2
+f = x << 2
+ 
+print(a, b, c, d, e, f)
+
+
+
+
+
+
+
+# ==============================================================# ==============================================================
+#3.4 Section 4 – Lists
+#3.4.1 Why do we need lists?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# ==============================================================# ==============================================================
+
+
+
+
+
+
+
+# ==============================================================# ==============================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# ==============================================================# ==============================================================
+
+
+
+
+# ==============================================================# ==============================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# ==============================================================# ==============================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
