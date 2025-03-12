@@ -577,10 +577,10 @@ print(j)
 
 
 
-i	            00000000000000000000000000001111
-j	            00000000000000000000000000010110
-bit = i & j	    00000000000000000000000000000110
-bit = i | j     000000000000000000000000000
+i	            #00000000000000000000000000001111
+j	            #00000000000000000000000000010110
+bit = i & j	    #00000000000000000000000000000110
+bit = i | j     #000000000000000000000000000
 ~i
 ~j
 
@@ -794,7 +794,244 @@ print(a, b, c, d, e, f)
 # ==============================================================# ==============================================================
 #3.4 Section 4 – Lists
 #3.4.1 Why do we need lists?
+lst = [1, [2, 3], 4]
+print(lst[1]) #---> [2, 3]
+print(len(lst)) #---> 3
 
+
+
+
+
+#3.4.2 Indexing lists
+
+numbers = [10, 5, 7, 2, 1]
+print("Original list contents:", numbers)  # Printing original list contents.
+ 
+numbers[0] = 111
+numbers[3] = 67
+numbers[4] = 12
+print("New list contents: ", numbers) 
+
+#3.4.3 Accessing list content
+print("\nList length:", len(numbers)) 
+
+
+#3.4.4 Removing elements from a list
+del numbers[1]
+print(len(numbers))
+print(numbers)
+
+print(numbers[4]) #------> Error message cause the 
+                #list went from [111, 5, 7, 67, 12] to [111, 7, 67, 12]
+numbers[4] = 1
+
+
+#3.4.5 Negative indices are legal
+numbers = [111, 7, 2, 1]
+print(numbers[-1])
+print(numbers[-2])
+print(numbers[-3])
+print(numbers[-4])
+print(numbers[-5]) #-----> doesnt exist
+
+
+#3.4.6   LAB   The basics of lists
+
+hat_list = [1, 2, 3, 4, 5]  # This is an existing list of numbers hidden in  
+                            #the hat.
+
+# Step 1: write a line of code that prompts the user
+# to replace the middle number with an integer number entered by the user.
+
+hat_list[2] = int(input("Enter number: "))
+print("New list is " + str(hat_list))
+
+# Step 2: write a line of code that removes the last element from the list.
+del hat_list[-1]
+
+
+
+# Step 3: write a line of code that prints the length of the existing list.
+print(len(hat_list))
+print(hat_list)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# ==============================================================# ==============================================================
+
+#3.4.7 Functions vs. methods
+
+# A method is a specific kind of function ‒ it behaves like a function and looks like a function, but differs in the way in which it acts, and in its invocation style.
+
+# A function doesn't belong to any data ‒ it gets data, it may create new data and it (generally) produces a result.
+
+# A method does all these things, but is also able to change the state of a selected entity.
+
+# A method is owned by the data it works for, while a function is owned by the whole code.
+
+# This also means that invoking a method requires some specification of the data from which the method is invoked.
+
+# It may sound puzzling here, but we'll deal with it in depth when we delve into object-oriented programming.
+
+
+
+
+
+
+#3.4.8 Adding elements to a list: append() and insert()
+
+numbers = [111, 7, 2, 1]
+print(len(numbers))
+print(numbers)
+
+###
+
+numbers.append(4)
+print(len(numbers))
+print(numbers)
+
+numbers.append(10)
+print(len(numbers))
+print(numbers)
+
+numbers.append(7689)
+print(len(numbers))
+print(numbers)
+
+###
+
+numbers.insert(0, 222)
+print(len(numbers))
+print(numbers)
+
+numbers.insert(7, 0)
+print(len(numbers))
+print(numbers)
+
+
+
+
+
+
+
+
+#I'm confused here
+my_list = []  # Creating an empty list.
+for i in range(5):
+    my_list.append(i + 1)
+print(my_list)
+
+
+my_list = []  # Creating an empty list. 
+for i in range(5):
+    my_list.insert(0, i + 1) 
+print(my_list)
+
+
+
+
+
+# ==============================================================# ==============================================================
+
+#3.4.9 Making use of lists
+my_list = [10, 1, 8, 3, 5]
+total = 0
+
+for i in range(len(my_list)):
+    total += my_list[i]
+
+print(total)
+
+
+
+
+my_list = [10, 1, 8, 3, 5]
+total = 0
+for i in range(len(my_list)):
+    total += my_list[i]
+print(total)
+
+
+
+
+my_list = [10, 1, 8, 3, 5]
+total = 10
+for i in range(len(my_list)):
+    total += my_list[i]
+print(total)
+
+
+
+
+my_list = [10, 1, 8, 3, 5]
+total = 20
+for i in range(len(my_list)):
+    total += my_list[i]
+print(total)
+
+
+
+
+
+
+
+
+
+
+
+
+# ==============================================================# ==============================================================
+
+
+# 3.4.10 Lists in action
+
+variable_1 = 1
+variable_2 = 2
+ 
+variable_2 = variable_1
+variable_1 = variable_2
+
+
+
+my_list = [10, 1, 8, 3, 5]
+ 
+my_list[0], my_list[4] = my_list[4], my_list[0]
+my_list[1], my_list[3] = my_list[3], my_list[1]
+ 
+print(my_list)
+ 
+
+
+
+my_list = [5, 3, 8, 1, 10]
+for i in range(len(my_list) // 2):
+    my_list[i], my_list[len(my_list) - i - 1] = my_list[len(my_list) - i - 1], my_list[i]
+print(my_list)
+
+
+
+
+
+
+
+
+# ==============================================================# ==============================================================
+
+
+
+
+# ==============================================================# ==============================================================
 
 
 
@@ -828,45 +1065,6 @@ print(a, b, c, d, e, f)
 
 
 
-# ==============================================================# ==============================================================
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# ==============================================================# ==============================================================
-
-
-
-
-# ==============================================================# ==============================================================
-
-
-
-
-
-
-
 
 
 
@@ -911,6 +1109,259 @@ print(a, b, c, d, e, f)
 
 
 
+# ==============================================================# ==============================================================
+
+# ==============================================================# ==============================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# ==============================================================# ==============================================================
+
+# ==============================================================# ==============================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# ==============================================================# ==============================================================
+
+# ==============================================================# ==============================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# ==============================================================# ==============================================================
+
+# ==============================================================# ==============================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# ==============================================================# ==============================================================
+
+# ==============================================================# ==============================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# ==============================================================# ==============================================================
+
+# ==============================================================# ==============================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# ==============================================================# ==============================================================
+
+# ==============================================================# ==============================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# ==============================================================# ==============================================================
+
+# ==============================================================# ==============================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# ==============================================================# ==============================================================
+
+# ==============================================================# ==============================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# ==============================================================# ==============================================================
 
 
 
