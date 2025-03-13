@@ -1034,6 +1034,39 @@ print(my_list)
 # ==============================================================# ==============================================================
 
 
+squares = [x ** 2 for x in range(10)]
+
+squares2 = []
+
+for i in range(10):
+    i = i**2
+    squares2.append(i)
+    print(i)
+    print(squares2)
+print(squares2)
+
+
+
+
+squares = [x ** 2 for x in range(10)]
+
+squares2 = []
+
+for i in range(10):
+    i = i**2
+    squares2.append(i)
+    print(i)
+    print(squares2)
+print(squares2)
+
+odds = [x for x in squares if x % 2 != 0 ]
+print(odds)
+
+even = []
+for x in squares:
+    if x % 2 == 0:
+        even.append(x)
+print(even)
 
 
 
@@ -1043,14 +1076,35 @@ print(my_list)
 
 
 
+squares = [x ** 2 for x in range(10), [1, 1, 1]] #-------> Can't do that
+
+squares2 = []
+
+for i in range(10):
+    i = i**2
+    squares2.append(i)
+    print(i)
+    print(squares2)
+print(squares2)
+
+odds = [x for x in squares if x % 2 != 0 ]
+print(odds)
+
+even = []
+for x in squares:
+    if x % 2 == 0:
+        even.append(x)
+print(even)
 
 
 
-
-
-
-
-
+board = []
+ 
+for x in range(4):
+    row = [i for i in range(4)]
+    board.append(row)
+    print(board)
+print(board)
 
 
 
