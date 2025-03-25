@@ -233,7 +233,21 @@ if number > largest_number:
 # Go to line 02
 
 
+# Read three numbers.
+number1 = int(input("Enter the first number: "))
+number2 = int(input("Enter the second number: "))
+number3 = int(input("Enter the third number: "))
+largest_number = max(number1, number2, number3)
+print("The largest number is:", str(largest_number))
+ 
 
+# Read three numbers.
+number1 = int(input("Enter the first number: "))
+number2 = int(input("Enter the second number: "))
+number3 = int(input("Enter the third number: "))
+smallest_number = min(number1, number2, number3)
+print("The smallest number is:", str(smallest_number))
+ 
 
 
 # ==============================================================# ==============================================================
@@ -253,7 +267,8 @@ if number > largest_number:
 
 
 
-#Actual Answer
+#Actual Answer   
+
 name = input("Enter flower name: ")
 if name == "Spathiphyllum":
     print("Yes - Spathiphyllum is the best plant ever!")
@@ -263,7 +278,13 @@ else:
     print("Spathiphyllum! Not", name + "!")
 
 
-
+age = int(input("Enter age: "))
+if age > 18 and age < 21:
+    print("Enter but not allowed to drink.")
+elif age > 21:
+    print("Can enter the club and drink.")
+else:
+    print("Not allowed in.")
 
 
 
@@ -330,11 +351,23 @@ print("The smallest number is: ", smallest_number)
 
 
 
+#=======> To come back to: 
+oldest = 47
+age = int(input("Enter age: "))
+while age != list():
+    if age > oldest:
+        age = oldest
+    age = int(input("Enter age: "))
+print("Not allowed in.")
 
 
-
-
-
+oldest = 47
+age = int(input("Enter age: "))
+while age != list(range(1, 101)):
+    if age > oldest:
+        oldest = age
+    age = int(input("Enter age: "))
+print("The oldest is: " + str(oldest))
 
 
 
@@ -396,7 +429,27 @@ while counter != 0:
     counter -= 1
 print("Outside the loop.", counter)
 
+#========================================
+i = 0
+while i < 100:
+    # do_something()
+    i += 1
 
+#the same in a for loop
+
+for i in range(100):
+    # do_something()
+    pass
+
+
+
+
+
+
+
+
+
+#========================================
 
 
 
@@ -417,6 +470,18 @@ for counter in range(2, 12):
 
 for counter in range(2, 8):
     print("Inside the loop.", counter)
+
+
+
+#3.2.6 More about for loop and the range() function
+
+for i in range(2, 8, 3):
+    print("The value of i is currently", i)
+
+    #Confusing......
+
+
+#3.2.7 LAB:
 
 
 # ==============================================================# ==============================================================
@@ -822,7 +887,8 @@ print(len(numbers))
 print(numbers)
 
 print(numbers[4]) #------> Error message cause the 
-                #list went from [111, 5, 7, 67, 12] to [111, 7, 67, 12]
+                #list went from [111, 5, 7, 67, 12] 
+                #to [111, 7, 67, 12]
 numbers[4] = 1
 
 
@@ -981,8 +1047,14 @@ for i in range(len(my_list)):
 print(total)
 
 
+#======== My own
+my_list = [3, 1, 2, 3, 5]
+total = 0
 
+for i in range(len(my_list)):
+    total += my_list[i]
 
+print(total)
 
 
 
@@ -1027,6 +1099,26 @@ print(my_list)
 
 
 # ==============================================================# ==============================================================
+#3.5.1   
+
+
+#3.5.2 Sorting a list
+
+my_list = [8, 10, 6, 2, 4]  # list to sort
+swapped = True  # It's a little fake, we need it to enter the while loop.
+ 
+while swapped:
+    swapped = False  # no swaps so far
+    for i in range(len(my_list) - 1):
+        if my_list[i] > my_list[i + 1]:
+            swapped = True  # a swap occurred!
+            my_list[i], my_list[i + 1] = my_list[i + 1], my_list[i]
+ 
+print(my_list)
+ 
+
+
+
 
 
 
@@ -1113,6 +1205,170 @@ print(board)
 
 # ==============================================================# ==============================================================
 
+
+def print_board(board):
+    for i in range(3):
+        print(" | ".join(board[i]))
+        if i < 2:
+            print("-" * 5)
+
+
+def check_winner(board, player):
+    for i in range(3):
+        if all([board[i][j] == player for j in range(3)]) or all([board[j][i] == player for j in range(3)]):
+            return True
+    if board[0][0] == player and board[1][1] == player and board[2][2] == player:
+        return True
+    if board[0][2] == player and board[1][1] == player and board[2][0] == player:
+        return True
+    return False
+
+def is_full(board):
+    for row in board:
+        if ' ' in row:
+            return False
+    return True
+
+def play_game():
+    board = [[' ' for _ in range(3)] for _ in range(3)]  
+    current_player = 'X'  
+    
+    while True:
+        print_board(board)
+        
+        print(f"Player {current_player}, enter your move (row and column): ")
+        row, col = map(int, input("Enter row and column (0, 1, or 2) separated by a space: ").split())
+        
+        if board[row][col] != ' ':
+            print("Invalid move, the cell is already taken.")
+            continue
+        
+        board[row][col] = current_player
+        
+        if check_winner(board, current_player):
+            print_board(board)
+            print(f"Player {current_player} wins!")
+            break
+        
+        if is_full(board):
+            print_board(board)
+            print("It's a tie!")
+            break
+        
+        current_player = 'O' if current_player == 'X' else 'X'
+
+play_game()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+from random import randrange
+
+
+def display_board(board):
+	print("+-------" * 3,"+", sep="")
+	for row in range(3):
+		print("|       " * 3,"|", sep="")
+		for col in range(3):
+			print("|   " + str(board[row][col]) + "   ", end="")
+		print("|")
+		print("|       " * 3,"|",sep="")
+		print("+-------" * 3,"+",sep="")
+
+
+def enter_move(board):
+	ok = False	# fake assumption - we need it to enter the loop
+	while not ok:
+		move = input("Enter your move: ") 
+		ok = len(move) == 1 and move >= '1' and move <= '9' # is user's input valid?
+		if not ok:
+			print("Bad move - repeat your input!") # no, it isn't - do the input again
+			continue
+		move = int(move) - 1 	# cell's number from 0 to 8
+		row = move // 3 	# cell's row
+		col = move % 3		# cell's column
+		sign = board[row][col]	# check the selected square
+		ok = sign not in ['O','X'] 
+		if not ok:	# it's occupied - to the input again
+			print("Field already occupied - repeat your input!")
+			continue
+	board[row][col] = 'O' 	# set '0' at the selected square
+
+
+def make_list_of_free_fields(board):
+	free = []	
+	for row in range(3): # iterate through rows
+		for col in range(3): # iterate through columns
+			if board[row][col] not in ['O','X']: # is the cell free?
+				free.append((row,col)) # yes, it is - append new tuple to the list
+	return free
+
+
+def victory_for(board,sgn):
+	if sgn == "X":	# are we looking for X?
+		who = 'me'	# yes - it's computer's side
+	elif sgn == "O": # ... or for O?
+		who = 'you'	# yes - it's our side
+	else:
+		who = None	# we should not fall here!
+	cross1 = cross2 = True  # for diagonals
+	for rc in range(3):
+		if board[rc][0] == sgn and board[rc][1] == sgn and board[rc][2] == sgn:	# check row rc
+			return who
+		if board[0][rc] == sgn and board[1][rc] == sgn and board[2][rc] == sgn: # check column rc
+			return who
+		if board[rc][rc] != sgn: # check 1st diagonal
+			cross1 = False
+		if board[2 - rc][2 - rc] != sgn: # check 2nd diagonal
+			cross2 = False
+	if cross1 or cross2:
+		return who
+	return None
+
+
+def draw_move(board):
+	free = make_list_of_free_fields(board) # make a list of free fields
+	cnt = len(free)
+	if cnt > 0:	
+		this = randrange(cnt)
+		row, col = free[this]
+		board[row][col] = 'X'
+
+
+board = [ [3 * j + i + 1 for i in range(3)] for j in range(3) ] 
+board[1][1] = 'X' # set first 'X' in the middle
+free = make_list_of_free_fields(board)
+human_turn = True # which turn is it now?
+while len(free):
+	display_board(board)
+	if human_turn:
+		enter_move(board)
+		victor = victory_for(board,'O')
+	else:	
+		draw_move(board)
+		victor = victory_for(board,'X')
+	if victor != None:
+		break
+	human_turn = not human_turn		
+	free = make_list_of_free_fields(board)
+
+display_board(board)
+if victor == 'you':
+	print("You won!")
+elif victor == 'me':
+	print("I won")
+else:
+	print("Tie!")
 
 
 
