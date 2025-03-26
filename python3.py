@@ -287,6 +287,33 @@ else:
     print("Not allowed in.")
 
 
+#3.1.11
+
+income = float(input("Enter income: "))
+if income < 85528:
+    incomeTax = (income * 0.18)-556.02
+elif income >= 85528:
+    incomeTax = (14839.02 + 0.32) / 85528
+print("The tax is " + str(incomeTax) + " thalers")
+
+
+
+#corrections
+income = float(input("Enter the annual income: "))
+if income < 85528:
+	tax = income * 0.18 - 556.02
+else:
+	tax = (income - 85528) * 0.32 + 14839.02
+if tax < 0.0:
+	tax = 0.0
+tax = round(tax, 0)
+print("The tax is:", tax, "thalers")
+
+
+
+
+
+#3.1.12
 
 
 
@@ -358,7 +385,7 @@ while age != list():
     if age > oldest:
         age = oldest
     age = int(input("Enter age: "))
-print("Not allowed in.")
+print("Not allowing kids under 18 in.")
 
 
 oldest = 47
