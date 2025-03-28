@@ -1,13 +1,14 @@
-from random import random, seed
+my_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+to_find = 5
+found = False
 
-seed(0)
+for i in range(len(my_list)):
+    found = my_list[i] == to_find
+    if found:
+        break
 
-for i in range(5):
-    print(random())
-
-  
-
-
-
-
+if found:
+    print("Element found at index", i)
+else:
+    print("absent")
 

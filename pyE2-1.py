@@ -193,33 +193,78 @@ for i in range(5):
     print(random())
 
 
+#===
 
+from random import randrange, randint
 
+print(randrange(1), end=' ')
+print(randrange(0, 1), end=' ')
+print(randrange(0, 1, 1), end=' ')
+print(randint(0, 1))
 
+#===
 
+from random import choice, sample
 
+my_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-
-
-
+print(choice(my_list))
+print(sample(my_list, 5))
+print(sample(my_list, 10))
 
 
 #===============================================
+#1.2.5 How to know where you are?
+
+print("       /\\")
+print("      /  \\")
+print("     / My \\")
+print("    / Code \\")
+print("   /________\\")
+print("  /    py    \\")
+print(" /    thon    \\")
+print("/______________\\")
+print("/               \\")
+print("/     os         \\")
+print("/                 \\")
+print("/__________________\\")
+print("/                   \\")
+print("/     hard           \\")
+print("/     ware            \\")
+print("/                      \\")
+print("/__________________     \\")
+
+
+# This means than some of your 
+# (or rather your program's) 
+# actions have to travel a long 
+# way to be successfully performed 
+# - imagine that:
+
+# Your code wants to create a file, 
+# so it invokes one of Python's functions;
+
+
+# Python accepts the order, 
+# rearranges it to meet local OS requirements 
+# (it's like putting the stamp "approved" on 
+# your request) and sends it down (this may 
+# remind you of a chain of command)
+
+
+# The OS checks if the request is 
+# reasonable and valid (e.g., whether 
+# the file name conforms to some syntax rules)
+#  and tries to create the file; such an operation,
+#  seemingly very simple, isn't atomic - it 
+# consists of many minor steps taken by...
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
+# The hardware, which is responsible 
+# for activating storage devices 
+# (hard disk, solid state devices, etc.) 
+# to satisfy the OS's needs.
 
 
 
