@@ -1,10 +1,36 @@
-drawn = [5, 11, 9, 42, 3, 49]
-bets = [3, 7, 11, 42, 34, 49]
-hits = 0
+# import os
 
-for number in bets:
-    if number in drawn:
-        hits += 1
+# os.mkdir('thumbnails')
+# os.chdir('thumbnails')
 
-print(hits)
+# sizes = ['small', 'medium', 'large']
+
+# for size in sizes:
+#     os.mkdir(size)
+
+# print(os.listdir())
+
+
+# def fun(n):
+#     s = '+'
+#     for i in range(n):
+#         s += s
+#         yield s
+
+
+# for x in fun(2):
+#     print(x, end='');
+
+
+
+
+# my_tuple = (0, 1, 2, 3, 4, 5, 6)
+# # Insert line of code here.
+# print(foo)
+
+
+my_list = [1, 2, 3]
+# Insert line of code here.
+print(foo)
+
 
