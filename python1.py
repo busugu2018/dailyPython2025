@@ -1,10 +1,119 @@
-print(123);
+#2.1 - Hello, World!
+print("Hello, World!")
+
+
+
+
+
+
+
+
+
+#2.1.8
+#     \n   as a 
+print("The itsy bitsy spider\nclimbed up the waterspout.")
+print()
+print("Down came the rain\nand washed the spider out.")
+
+
+#2.1.9 Multiple arguments
+
+print("The itsy bitsy spider" , "climbed up" , "the waterspout.")
+
+
+#2.1.10 Positional arguments
+print("My name is", "Python.")
+print("Monty Python.")
+
+
+#2.1.11 Keyword arguments
+print("My name is", "Python.", end=" ")
+print("Monty Python.")
+
+
+print("My", "name", "is", "Monty", "Python.", sep="-")
+# Answer: My-name-is-Monty-Python.
+
+
+
+print("My", "name", "is", sep="_", end="*")
+print("Monty", "Python.", sep="*", end="*\n")
+#My_name_is*Monty*Python.*
+
+
+print("Programming","Essentials","in: ")
+print("Python")
+
+
+#2.1.13 LAB 
+print("    *")
+print("   * *")
+print("  *   *")
+print(" *     *")
+print("***   ***")
+print("  *   *")
+print("  *   *")
+print("  *****")
+
+
+#2.1.15
+print('Greg\'s book.')
+print("'Greg's book.'")
+print('"Greg\'s book."')
+print("Greg\'s book.")
+
+
+
+
+
+#2.2 - Literals
+#2.2.1 Literals – the data in itself
+print("2")
+print(2)
+
+#2.2.2 Integers
+print(111111111111)
+
+
+
+#Octal and hexadecimal numbers
+print(0o123)
+
+
+
+
+#2.2.3 Floats
+
+
+
+
+#2.2.4 Strings
+
 print("I like \"Monty Python\"");
 print("I like 'Monty Python'");
 print('I like \'Monty Python\'');
 print('I like \"Monty Python\"');
 print('I\'m Monty Python.');
 print("I\'m Monty Python.");
+
+
+
+#2.2.5 Boolean values
+print(True > False)
+print(True < False)
+
+
+
+#2.2.6   LAB   Python literals - strings
+
+print("I'm", "\"Learning\"", "\"\"Python\"\"")
+
+print("\"I'm\"")
+print("\"\"Learning\"\"")
+print("\"\"\"Python\"\"\"")
+
+
+
 
 #2.3: Operators - data manipulation tools 
 #2.3.1: python as a calculator:
