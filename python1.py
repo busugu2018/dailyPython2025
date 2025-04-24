@@ -184,6 +184,85 @@ print(2*4.)
 print(2//4)
 print(-2//4) #math.floor
 
+
+#2.4.1 Variables – data-shaped boxes
+
+
+
+
+
+
+
+
+
+
+
+
+#2.4.2 Variable names
+
+# If you want to give a name to a variable, you must follow some strict rules:
+
+# the name of the variable must be composed of upper-case or lower-case letters, digits, and the character _ (underscore)
+# the name of the variable must begin with a letter;
+# the underscore character is a letter;
+# upper- and lower-case letters are treated as different (a little differently than in the real world – Alice and ALICE are the same first names, but in Python they are two different variable names, and consequently, two different variables);
+# the name of the variable must not be any of Python's reserved words (the keywords – we'll explain more about this soon).
+
+
+# Here are some correct, but not always convenient variable names:
+
+# MyVariable
+# i
+# l
+# t34
+# Exchange_Rate
+# counter
+# days_to_christmas
+# TheNameIsTooLongAndHardlyReadable
+# _
+
+
+# These variable names are also correct:
+
+# Adiós_Señora
+# sûr_la_mer
+# Einbahnstraße
+# переменная
+
+
+
+
+# And now for some incorrect names:
+
+# 10t (does not begin with a letter)
+# !important (does not begin with a letter)
+# exchange rate (contains a space)
+
+
+
+
+
+
+#2.4.3 How to create a variable
+
+var = 1
+print(var)
+
+
+#2.4.4 How to use a variable
+var = 1
+account_balance = 1000.0
+client_name = 'John Doe'
+print(var, account_balance, client_name)
+print(var)
+
+
+
+
+
+
+
+
 #2.6.3 The result of the input() function
 
 
