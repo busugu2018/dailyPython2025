@@ -1,5 +1,6 @@
-var = 1
-account_balance = 1000.0
-client_name = 'John Doe'
-print(var, account_balance, client_name)
-print(var)
+John = 3
+Mary = 5
+Adam = 6
+print(John, Mary, Adam, sep=',')
+totalApples = John + Mary + Adam
+print(totalApples)
