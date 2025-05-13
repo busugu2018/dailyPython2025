@@ -194,10 +194,6 @@ print(-2//4) #math.floor
 
 
 
-
-
-
-
 #2.4.2 Variable names
 
 # If you want to give a name to a variable, you must follow some strict rules:
@@ -237,6 +233,19 @@ print(-2//4) #math.floor
 # 10t (does not begin with a letter)
 # !important (does not begin with a letter)
 # exchange rate (contains a space)
+
+
+#Incorrect Names
+
+# ['False', 'None', 'True', 'and', 
+#  'as', 'assert', 'break', 'class', 
+#  'continue', 'def', 'del', 'elif', 
+#  'else', 'except', 'finally', 'for', 
+#  'from', 'global', 'if', 'import', 
+#  'in', 'is', 'lambda', 'nonlocal', 
+#  'not', 'or', 'pass', 'raise', 'return', 
+#  'try', 'while', 'with', 'yield']
+
 
 
 
@@ -300,7 +309,8 @@ print("c =", c)
 John = 3
 Mary = 5
 Adam = 6
-print(John, Mary, Adam, sep=',')
+print(John, Mary, Adam)
+print(John, Mary, Adam, sep=', ')
 totalApples = John + Mary + Adam
 print(totalApples)
 
@@ -400,6 +410,7 @@ print("y =", y)
 
 
 
+
 #2.5 Section 5 – Comments
 
 #2.5.1 Comments – why, when, and how?
@@ -462,11 +473,11 @@ print(x2 * y2)
 
 
 z3 = y3 = x3 = 1
-print(x, y, z, sep='*')
+print(x3, y3, z3, sep='*')
 
 
 y4 = 2 + 3 * 5.
-print(Y4)
+print(y4)
 
 
 
@@ -607,6 +618,101 @@ print(anything, "to the power of 2 is", something)
 
 #2.6.5 Type casting (type conversions)
 
+anything = float(input("Enter a number: "))
+something = anything ** 2.0
+print(anything, "to the power of 2 is", something)
+
+
+#2.6.6 More about input() and type casting
+
+leg_a = float(input("Input first leg length: "))
+leg_b = float(input("Input second leg length: "))
+hypo = (leg_a**2 + leg_b**2) ** .5
+print("Hypotenuse length is", hypo)
+
+
+leg_a = float(input("Input first leg length: "))
+leg_b = float(input("Input second leg length: "))
+print("Hypotenuse length is", (leg_a**2 + leg_b**2) ** .5)
+
+
+
+#2.6.7 String operators
+
+fnam = input("May I have your first name, please? ")
+lnam = input("May I have your last name, please? ")
+print("Thank you.")
+print("\nYour name is " + fnam + " " + lnam + ".")
+
+
+#This is 
+print("+" + 10 * "-" + "+")
+print(("|" + " " * 10 + "|\n") * 5, end="")
+print("+" + 10 * "-" + "+")
+
+#that
+print("+----------+")
+print("|          |")
+print("|          |")
+print("|          |")
+print("|          |")
+print("|          |")
+print("+----------+")
+
+
+#And this is 
+print("+----------+----------+----------+")
+print("|          |          |          |")
+print("|          |          |          |")
+print("|          |          |          |")
+print("|          |          |          |")
+print("|          |          |          |")
+print("+----------+----------+----------+")
+print("|          |          |          |")
+print("|          |          |          |")
+print("|          |          |          |")
+print("|          |          |          |")
+print("|          |          |          |")
+print("+----------+----------+----------+")
+print("|          |          |          |")
+print("|          |          |          |")
+print("|          |          |          |")
+print("|          |          |          |")
+print("|          |          |          |")
+print("+----------+----------+----------+")
+
+#That
+print("+" + 10 * "-" + "+"  + 10 * "-" + "+"  + 10 * "-" + "+")
+print((("|" + " " * 10 + "|" + " " * 10 + "|" + " " * 10 + "|\n") * 5), end="")
+print("+" + 10 * "-" + "+"  + 10 * "-" + "+"  + 10 * "-" + "+")
+print((("|" + " " * 10 + "|" + " " * 10 + "|" + " " * 10 + "|\n") * 5), end="")
+print("+" + 10 * "-" + "+"  + 10 * "-" + "+"  + 10 * "-" + "+")
+print((("|" + " " * 10 + "|" + " " * 10 + "|" + " " * 10 + "|\n") * 5), end="")
+print("+" + 10 * "-" + "+"  + 10 * "-" + "+"  + 10 * "-" + "+")
+
+
+#2.6.8 Type conversions once again
+
+leg_a = float(input("Input first leg length: "))
+leg_b = float(input("Input second leg length: "))
+print("Hypotenuse length is " + str((leg_a**2 + leg_b**2) ** .5))
+
+
+
+
+
+
+#2.6.9   LAB   Simple input and output
+
+# input a float value for variable a here
+# input a float value for variable b here
+
+# output the result of addition here
+# output the result of subtraction here
+# output the result of multiplication here
+# output the result of division here
+
+print("\nThat's all, folks!")
 
 
 
@@ -614,24 +720,7 @@ print(anything, "to the power of 2 is", something)
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+#2.6.10   LAB   Operators and expressions
 
 
 
