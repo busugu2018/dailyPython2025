@@ -723,8 +723,39 @@ print("\nThat's all, folks!")
 #2.6.10   LAB   Operators and expressions
 
 
+#This below is false
+# x = float(input("Enter value for x: "))
+
+# y = float(1/(x+(1/x+(1/x+(1/x)))))
+
+# print("y =", y)
 
 
+#this is correct:
+x = float(input("Enter value for x: "))
+
+y = float(1/(x+(1/(x+(1/(x+(1/(x))))))))
+
+print("y =", y)
+
+
+
+
+
+#2.6.11   LAB   Operators and expressions – 2
+
+hour = int(input("Starting time (hours): "))
+mins = int(input("Starting time (minutes): "))
+dura = int(input("Event duration (minutes): "))
+mins = mins + dura # find a total of all minutes
+hour = hour + mins // 60 # find a number of hours hidden in minutes and update the hour
+mins = mins % 60 # correct minutes to fall in the (0..59) range
+hour = hour % 24 # correct hours to fall in the (0..23) range
+print(hour, ":", mins, sep='')
+
+
+
+#2.6.12 SECTION SUMMARY
 
 
 
@@ -735,6 +766,32 @@ print("\nThat's all, folks!")
 #     "id": "repl_python_run",
 #     "file": "config/Python/Main.sublime-menu"
 # }
+
+
+
+#2.7 Module 2 Completion – MODULE TEST
+
+
+#Which of the following variable names are illegal? (Select two answers)
+# True 
+# and
+
+
+
+#What is the output of the following snippet if the user enters two lines containing 2 and 4 respectively?
+
+x = input()
+y = input()
+print(x + y)
+
+
+
+
+#What is the output of the following snippet if the user enters two lines containing 3 and 6 respectively?
+x = input()
+y = int(input())
+
+print(x * y)
 
 
 
