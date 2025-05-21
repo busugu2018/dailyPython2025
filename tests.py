@@ -1,6 +1,3 @@
-x = input()
-y = input()
-print(x + y)
-
-
+import random
+print(random.randint(1, 100000000000))
 
