@@ -1,3 +1,336 @@
+#3.1 Section 1 – Making decisions in Python
+
+# 3.1.1 Questions and answers
+ 
+
+# A programmer writes a program and the program asks questions.
+
+# A computer executes the program and provides the answers. 
+# The program must be able to react according to the received answers.
+
+# Fortunately, computers know only two kinds of answers:
+
+# yes, this is true;
+# no, this is false.
+# You will never get a response like Let me think...., 
+# I don't know, or Probably yes, but I don't know for sure.
+
+# To ask questions, Python uses a set of very special operators. 
+# Let's go through them one after another, illustrating their effects on some simple examples.
+
+
+
+
+
+#3.1.2 Comparison: equality operator
+# = is an assignment operator, e.g., a = b assigns a with the value of b;
+# == is the question are these values equal? so a == b compares a and b.
+
+
+
+
+#3.1.3 Exercises
+
+2 == 2 #true
+2 == 2. #true
+2 == 1 #false
+
+
+
+
+#3.1.4 Operators
+
+var = 0  # Assigning 0 to var
+print(var == 0)
+
+#true
+
+var = 1  # Assigning 1 to var
+print(var == 0)  
+
+#false
+
+
+
+black_sheep > white_sheep  # Greater than
+
+centigrade_outside >= 0.0  # Greater than or equal to
+
+current_velocity_mph < 85  # Less than
+current_velocity_mph <= 85  # Less than or equal to
+
+
+
+#3.1.5 Making use of the answers
+
+answer = number_of_lions >= number_of_lionesses
+
+
+
+#3.1.6   LAB   Variables ‒ Questions and answers
+
+
+# Using one of the comparison operators in Python,
+# write a simple two-line program that takes the 
+# parameter n as input, which is an integer, and 
+# prints False if n is less than 100, and True if 
+# n is greater than or equal to 100.
+
+# Don't create any if blocks (we're going to talk 
+# about them very soon). Test your code using the 
+# data we've provided for you.
+
+
+
+# n = 94
+# if n < 100:
+#     print("False")
+# else:
+#     print("True")
+
+#This is the correction:
+n = int(input("Enter a number: "))
+print(n >= 100)
+
+
+#Another example:
+userName = input()
+password = input()
+print(userName == 'Nziengui1990' and password == 'ABC123')
+
+
+#3.1.7 Conditions and conditional execution
+
+if the_weather_is_good:
+    go_for_a_walk()
+have_lunch()
+
+
+if sheep_counter >= 120: # Evaluate a test expression
+    sleep_and_dream() # Execute if test expression is True
+
+
+if sheep_counter >= 120:
+    make_a_bed()
+    take_a_shower()
+    sleep_and_dream()
+feed_the_sheepdogs()
+
+#if and else
+if true_or_false_condition:
+    perform_if_condition_true
+else:
+    perform_if_condition_false
+
+
+if true_or_false_condition:
+    perform_if_condition_true
+else:
+    perform_if_condition_false
+
+
+if the_weather_is_good:
+    go_for_a_walk()
+else:
+    go_to_a_theater()
+have_lunch()
+
+
+if the_weather_is_good:
+    go_for_a_walk()
+    have_fun()
+else:
+    go_to_a_theater()
+    enjoy_the_movie()
+have_lunch()
+
+
+if the_weather_is_good:
+    if nice_restaurant_is_found:
+        have_lunch()
+    else:
+        eat_a_sandwich()
+else:
+    if tickets_are_available:
+        go_to_the_theater()
+    else:
+        go_shopping()
+
+
+if the_weather_is_good:
+    go_for_a_walk()
+elif tickets_are_available:
+    go_to_the_theater()
+elif table_is_available:
+    go_for_lunch()
+else:
+    play_chess_at_home()
+
+
+
+
+#3.1.8 Analyzing code samples
+
+# Read two numbers
+number1 = int(input("Enter the first number: "))
+number2 = int(input("Enter the second number: "))
+
+# Choose the larger number
+if number1 > number2:
+    larger_number = number1
+else:
+    larger_number = number2
+
+# Print the result
+print("The larger number is:", larger_number)
+
+
+
+# Read three numbers
+number1 = int(input("Enter the first number: "))
+number2 = int(input("Enter the second number: "))
+number3 = int(input("Enter the third number: "))
+
+# We temporarily assume that the first number
+# is the largest one.
+# We will verify this soon.
+largest_number = number1
+
+# We check if the second number is larger than the current largest_number
+# and update the largest_number if needed.
+if number2 > largest_number:
+    largest_number = number2
+
+# We check if the third number is larger than the current largest_number
+# and update the largest_number if needed.
+if number3 > largest_number:
+    largest_number = number3
+
+# Print the result
+print("The largest number is:", largest_number)
+
+
+
+
+
+#Mine:
+num1 = int(input("Num 1: "))
+num2 = int(input("Num 2: "))
+num3 = int(input("Num 3: "))
+
+if num1 > num2 and num1 > num3:
+    largestNumber = num1
+if num3 > num1 and num3 > num2:
+    largestNumber = num3
+if num2 > num3 and num2 > num3:
+    largestNumber = num2
+print(largestNumber)
+
+
+
+#3.1.9 Pseudocode and introduction to loops
+
+largest_number = -999999999
+number = int(input())
+if number == -1:
+    print(largest_number)
+    exit()
+if number > largest_number:
+    largest_number = number
+# Go to line 02
+
+
+
+
+# Read three numbers.
+number1 = int(input("Enter the first number: "))
+number2 = int(input("Enter the second number: "))
+number3 = int(input("Enter the third number: "))
+
+# Check which one of the numbers is the greatest
+# and pass it to the largest_number variable.
+
+largest_number = max(number1, number2, number3)
+
+# Print the result.
+print("The largest number is:", largest_number)
+
+
+
+
+
+#3.1.10   LAB   Comparison operators and conditional execution
+
+n = input("Enter name: ")
+if n == "Spathiphyllum":
+    print("Yes - Spathiphyllum is the best plant ever!")
+elif n == "spathiphyllum":
+    print("No, I want a big Spathiphyllum!")
+else:
+    print("Spathiphyllum! Not " + n + "!")
+
+
+
+
+
+
+
+
+
+#3.1.11   LAB   Essentials of the if-else statement
+
+
+
+
+
+
+# Operator	         Description	                    Example
+
+# ==	            returns True if operands'               x == y  # False 
+#                 values are equal, and False             x == z  # True
+#                 otherwise	
+
+# !=	            returns True if operands'               x != y  # True
+#                 values are not equal, and               x != z  # False
+#                 False otherwise	
+
+
+# >	            True if the left operand's              x > y  # False
+#                value is greater than the right          y > z  # True
+#                 operand's value, and False 
+#                 otherwise	
+
+
+# <	            True if the left operand's              x < y  # True
+#                value is less than the right            y < z  # False
+#                 operand's value, and False 
+#                 otherwise	
+
+
+# >=	          True if the left operand's              x >= y  # False
+#                 value is greater than or equal          x >= z  # True
+#                 to the right operand's value,           y >= z  # True
+#                 and False otherwise	
+
+
+
+# <=	            True if the left operand's              x <= y  # True
+#                 value is less than or equal             x <= z  # True
+#                 to the right operand's value,           y <= z  # False
+#                 and False otherwise	
+
+
+
+
+
+
+
+
+
+
+
+#Done During PerScholas Classes:
+
 #3.1 Boolean values, Conditional execution, loops, lists and 
 # list processing, logical bitwise operations
 
@@ -20,13 +353,6 @@ elif ((weather1 < 75) and (weather1 > 60)):
     print("The weather is " + str(weather1) + ", I'll stay home.")
 else:
     print("It's freezing, I'll stay my a** home.")
-
-
-
-
-
-
-
 
 #The if-elif-else statement, e.g.:
 x = 10
@@ -325,7 +651,31 @@ print("The tax is:", tax, "thalers")
 
 
 
+
+
+
+
+
+
 # ==============================================================# ==============================================================
+#3.2 Section 2 – Loops in Python
+
+
+
+
+#3.2.1 Looping your code with while
+
+# while there is something to do
+#     do it
+
+
+# while
+#     instruction
+
+
+
+
+
 #3.2.2 An infinite loop
 # while True:
 #     print("I'm stuck inside a loop.")
