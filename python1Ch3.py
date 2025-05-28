@@ -575,6 +575,13 @@ smallest_number = min(number1, number2, number3)
 print("The smallest number is:", str(smallest_number))
  
 
+joAge = int(input("Enter age: "))
+annAge = int(input("Enter age: "))
+mattAge = int(input("Enter age: "))
+oldest = max(joAge, annAge, mattAge)
+youngest = min(joAge, annAge, mattAge)
+print("The oldest of them is: " + str(oldest))
+print("The youngest of them is: " + str(youngest))
 
 # ==============================================================# ==============================================================
 
@@ -806,18 +813,18 @@ while counter != 0:
     counter -= 1
 print("Outside the loop.", counter)
 
+
+
+counter = -5
+while counter != 5:
+    print("Inside loop: ", counter)
+    counter+=1
+print("Outside loo: ", counter)
+
+
 #========================================
-i = 0
-while i < 100:
-    # do_something()
-    i += 1
 
-#the same in a for loop
-
-for i in range(100):
-    # do_something()
-    pass
-
+#3.2.4   LAB   Guess the secret number
 
 
 
@@ -832,8 +839,24 @@ for i in range(100):
 
 #3.2.5 Looping your code with for
 #counter:
+
+
+
+i = 0
+while i < 100:
+    # do_something()
+    i += 1
+
+#the same in a for loop
+
+for i in range(100):
+    # do_something()
+    pass
+
+
+
 for i in range(10):
-    print("The value of i is currently", i)
+    print("The value of i is currently" + i)
 
 for i in range(50):
     print("The value of i is currently", i)
