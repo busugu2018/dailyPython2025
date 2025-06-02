@@ -1,2 +1,5 @@
-for i in range(2, 8, 3):
-    print("The value of i is currently", i)
+#How many people entered the club? 
+# How many were underage? 
+# How many were of age to drink? 
+
+
