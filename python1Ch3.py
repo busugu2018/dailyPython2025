@@ -473,6 +473,38 @@ for row in table_data:
 
 
 
+table_data = [
+        {"Name": "Alice", "Age": 30, "City": "New York", "salesRevenue": 5000},
+        {"Name": "Bob", "Age": 25, "City": "Los Angeles", "salesRevenue": 24000},
+        {"Name": "Boldan", "Age": 30, "City": "Dallas", "salesRevenue": 22378},
+        {"Name": "Charlie", "Age": 31, "City": "Chicago", "salesRevenue": 6000},
+        {"Name": "Matt", "Age": 25, "City": "Joburg", "salesRevenue": 8000},
+        {"Name": "Hank", "Age": 19, "City": "Libreville", "salesRevenue": 20385},
+        {"Name": "Charles", "Age": 45, "City": "Dallas", "salesRevenue": 19000},
+        {"Name": "Carl", "Age": 55, "City": "Houston", "salesRevenue": 5500},
+        {"Name": "Martin", "Age": 65, "City": "Rohd-Island", "salesRevenue": 8790},
+        {"Name": "Manning", "Age": 33, "City": "Lubbock", "salesRevenue": 17890},
+        {"Name": "Brock", "Age": 38, "City": "Tchibanga", "salesRevenue": 7458},
+        {"Name": "Bell", "Age": 23, "City": "Mayes", "salesRevenue": 18988},
+        {"Name": "Dexter", "Age": 29, "City": "Poryland", "salesRevenue": 24889},
+        {"Name": "Ronald", "Age": 20, "City": "Portland", "salesRevenue": 9058},
+        {"Name": "Sho", "Age": 38, "City": "Minneapolis", "salesRevenue": 6890},
+        {"Name": "Kojo", "Age": 25, "City": "Chicago", "salesRevenue": 12394},
+        {"Name": "Dewango", "Age": 35, "City": "Houston", "salesRevenue": 15678},
+        {"Name": "Welembi", "Age": 25, "City": "Austin", "salesRevenue": 23654},
+        {"Name": "Epeka", "Age": 27, "City": "Chicago", "salesRevenue": 22928},
+        {"Name": "Nzali", "Age": 37, "City": "Plano", "salesRevenue": 7495},
+        {"Name": "Vanelevan", "Age": 31, "City": "New York", "salesRevenue": 10293},
+        {"Name": "Uwarriss", "Age": 46, "City": "New Jersey", "salesRevenue": 11345},
+        {"Name": "Tchibinda", "Age": 18, "City": "Louisiana", "salesRevenue": 9857},
+        {"Name": "Mbadinga", "Age": 45, "City": "Chicago", "salesRevenue": 9485}
+    ]
+for row in table_data:
+    print(row["City"])
+
+
+
+
 #Learn pandas package from Python
 # import random
 # import pandas as pd
@@ -914,6 +946,74 @@ print("Outside the loop. ")
 
 
 
+largest_number = -99999999
+counter = 0
+
+while True:
+    number = int(input("Enter a number or type -1 to end the program: "))
+    if number == -1:
+        break
+    counter += 1
+    if number > largest_number:
+        largest_number = number
+
+if counter != 0:
+    print("The largest number is", largest_number)
+else:
+    print("You haven't entered any number.")
+
+
+
+
+
+
+largest_number = -99999999
+counter = 0
+
+number = int(input("Enter a number or type -1 to end program: "))
+
+while number != -1:
+    if number == -1:
+        continue
+    counter += 1
+
+    if number > largest_number:
+        largest_number = number
+    number = int(input("Enter a number or type -1 to end the program: "))
+
+if counter:
+    print("The largest number is", largest_number)
+else:
+    print("You haven't entered any number.")
+
+
+
+# ==============================================================# ==============================================================
+
+#3.2.9   LAB   The break statement – Stuck in a loop
+
+
+# word = input("Enter code word: ")
+
+# while word != "chupacabra":
+#     if word == "chupacabra":
+#         break
+#     print("Enter code word: ")
+# print("You've successfully left the loop.")
+
+
+while True:
+    word = input("Enter a word: ")
+    if word == "chupacabra":
+        print("You've successfully left the loop.")
+        break
+
+
+
+
+
+
+
 
 
 
@@ -956,22 +1056,24 @@ print("Outside the loop. ")
 
 # ==============================================================# ==============================================================
 
+#3.3.1 Computer logic
+
+#and
+# Argument A	|    Argument B	   |     A and B
+#---------------|------------------|-------------
+# False	        |    False	       |     False
+# False	        |    True	       |     False
+# True	        |    False	       |     False
+# True	        |    True	       |     True
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+#or
+# Argument A	|    Argument B	   |     A and B
+#---------------|------------------|-------------
+# False	        |    False	       |     False
+# False	        |    True	       |     True
+# True	        |    False	       |     True
+# True	        |    True	       |     True
 
 
 
@@ -985,21 +1087,18 @@ print("Outside the loop. ")
 
 #3.3.2 Logical expressions
 
+# Example 1:
+print(var > 0)
+print(not (var <= 0))
 
 
+# Example 2:
+print(var != 0)
+print(not (var == 0))
 
 
-
-
-
-
-
-
-
-
-
-
-
+not (p and q) == (not p) or (not q)
+not (p or q) == (not p) and (not q)
 
 
 
@@ -1017,23 +1116,12 @@ print(j)
 
 
 
+# ==============================================================# ==============================================================
 
+# 3.3.3 Logical values vs. single bits
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+i = 1
+j = not not i
 
 
 
@@ -1052,8 +1140,9 @@ bit = i | j     #000000000000000000000000000
 
 
 
+# ==============================================================# ==============================================================
 
-
+#3.3.5 How do we deal with single bits?
 
 
 
@@ -1109,35 +1198,6 @@ bit = i | j     #000000000000000000000000000
 # It's important to understand operator precedence, which determines the order in which operations are performed. Parentheses can be used to override the default precedence.
 # Introduction to Python. What is Python Programming Language? | by ...
 # We cannot use a keyword as a variable name, function name or any other identifier. They are used to define the syntax and structur...
-
-
-
-
-
-
-
-# ==============================================================# ==============================================================
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
