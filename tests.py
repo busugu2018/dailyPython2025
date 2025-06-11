@@ -1,6 +1,5 @@
-numbers = [10, 5, 7, 2, 1]
-print("Original list contents:", numbers)  # Printing original list contents.
-
-numbers[0] = 111
-print("New list contents: ", numbers)  # Current list contents.
-
+numbers = [111, 7, 2, 1]
+print(numbers[-1])
+print(numbers[-2])
+print(numbers[-3])
+print(numbers[-4])
