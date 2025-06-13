@@ -1447,7 +1447,11 @@ print(len(numbers))
 print(numbers)
 
 
-
+#===========
+employeeNames = ["jo", "Jack", "Jane", "Jill"]
+print(len(employeeNames))
+employeeNames.append("Jake")
+print(employeeNames)
 
 
 
@@ -1464,6 +1468,31 @@ my_list = []  # Creating an empty list.
 for i in range(5):
     my_list.insert(0, i + 1) 
 print(my_list)
+
+
+#================
+
+myList = []
+for i in range(10):
+    myList.append(i+3)
+print(myList)
+
+
+
+myList = []
+for i in range(5):
+    myList.append((20*i)+1)
+print(myList)
+
+
+#================
+
+myList = []
+for i in range(3):
+    myList.insert(0, 4)
+print(myList)
+
+
 
 
 
