@@ -1372,9 +1372,10 @@ hat_list = [1, 2, 3, 4, 5]  # This is an existing list of numbers hidden in
 hat_list[2] = int(input("Enter number: "))
 print("New list is " + str(hat_list))
 
+
 # Step 2: write a line of code that removes the last element from the list.
 del hat_list[-1]
-
+print("Newer list is " + str(hat_list))
 
 
 # Step 3: write a line of code that prints the length of the existing list.
