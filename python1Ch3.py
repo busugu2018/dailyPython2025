@@ -258,6 +258,16 @@ print("The largest number is:", largest_number)
 
 
 
+#mine
+num1 = int(input("Enter number 1: "))
+num2 = int(input("Enter number 2: "))
+num3 = int(input("Enter number 3: "))
+smallestNum = min(num1, num2, num3)
+print(str(smallestNum) + " is the smallest number of them all.")
+
+
+
+
 
 #3.1.10   LAB   Comparison operators and conditional execution
 

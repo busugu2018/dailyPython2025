@@ -1,4 +1,3 @@
-myList = []
-for i in range(3):
-    myList.insert(0, 4)
-print(myList)
+
+print(2.4)
+print(-.93850)

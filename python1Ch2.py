@@ -30,15 +30,23 @@ print("Monty Python.")
 print("My name is", "Python.", end=" ")
 print("Monty Python.")
 
+print("His name is Jesus", "He was killed on the cross.", end=" ")
+print("For claiming He was the savior of the world.")
+
 
 print("My", "name", "is", "Monty", "Python.", sep="-")
-# Answer: My-name-is-Monty-Python.
+#     Answer: My-name-is-Monty-Python.
+
+
+
+print("Her phone number is: ", end=" ")
+print("469", "305", "9365", sep="-")
 
 
 
 print("My", "name", "is", sep="_", end="*")
 print("Monty", "Python.", sep="*", end="*\n")
-#My_name_is*Monty*Python.*
+#     My_name_is*Monty*Python.*
 
 
 print("Programming","Essentials","in: ")
@@ -70,6 +78,8 @@ print("Greg\'s book.")
 #2.2.1 Literals – the data in itself
 print("2")
 print(2)
+print(88)
+print("87")
 
 #2.2.2 Integers
 print(111111111111)
@@ -84,7 +94,8 @@ print(0o123)
 
 #2.2.3 Floats
 
-
+print(2.4)
+print(-.93850)
 
 
 #2.2.4 Strings
