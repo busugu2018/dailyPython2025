@@ -589,6 +589,16 @@ print(anything, "to the power of 2 is", something)
 
 
 
+name = input("Enter name: ")
+age = int(input("Enter age: "))
+salary = int(input("Enter salary: "))
+print("My name is: " + str(name))
+print("I am " + str(age) + " years old.")
+print("I make " + str(salary) + " dollars.")
+
+
+
+
 
 # #2.6.4 The input() function – prohibited operations
 
@@ -700,6 +710,27 @@ print((("|" + " " * 10 + "|" + " " * 10 + "|" + " " * 10 + "|\n") * 5), end="")
 print("+" + 10 * "-" + "+"  + 10 * "-" + "+"  + 10 * "-" + "+")
 print((("|" + " " * 10 + "|" + " " * 10 + "|" + " " * 10 + "|\n") * 5), end="")
 print("+" + 10 * "-" + "+"  + 10 * "-" + "+"  + 10 * "-" + "+")
+
+
+
+
+
+
+#done myself again recently today:
+print("+" + "-"*10 + "+")
+print(("|" + " "*10 + "|\n")*5, end="")
+print("+" + "-"*10 + "+")
+
+
+print("+" + "-"*10 + "+" + "-"*10 + "+" + "-"*10 + "+")
+print(("|" + " "*10  + "|" + " "*10 + "|" + " "*10 + "|\n")*5, end="")
+print("+" + "-"*10 + "+" + "-"*10 + "+" + "-"*10 + "+")
+print(("|" + " "*10  + "|" + " "*10 + "|" + " "*10 + "|\n")*5, end="")
+print("+" + "-"*10 + "+" + "-"*10 + "+" + "-"*10 + "+")
+print(("|" + " "*10  + "|" + " "*10 + "|" + " "*10 + "|\n")*5, end="")
+print("+" + "-"*10 + "+" + "-"*10 + "+" + "-"*10 + "+")
+
+
 
 
 #2.6.8 Type conversions once again
