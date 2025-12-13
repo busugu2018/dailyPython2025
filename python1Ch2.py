@@ -15,6 +15,13 @@ print("The itsy bitsy spider\nclimbed up the waterspout.")
 print()
 print("Down came the rain\nand washed the spider out.")
 
+print("Black Friday deals are on. \nBuy one get one Free.")
+print()
+print("Buy one. \n Get one Free.")
+print()
+print("Name:...\nAge:...\nAddress:...")
+
+
 
 #2.1.9 Multiple arguments
 
@@ -198,7 +205,23 @@ print(-2//4) #math.floor
 
 #2.4.1 Variables – data-shaped boxes
 
+#What does every Python variable have?
+# a name;
+# a value (the content of the container)
 
+
+
+#       _________________
+#      /                /|
+#     /                / |
+#    /                /  |
+#   /                /   |
+#  /________________/    |                   
+# |                 |    /
+# |                 |   / 
+# |                 |  / 
+# |                 | /
+# |_________________|/
 
 
 
@@ -329,7 +352,13 @@ print(totalApples)
 
 
 
-
+John_apple_number = 4
+Jo_apple_number = 6
+Mac_apple_number = 9
+total_apple_number = John_apple_number+Jo_apple_number+Mac_apple_number
+print(John_apple_number, Jo_apple_number, Mac_apple_number)
+print(John_apple_number, Jo_apple_number, Mac_apple_number, sep="-")
+print(total_apple_number)
 
 
 
@@ -338,10 +367,10 @@ print(totalApples)
 #2.4.8 Shortcut operators
 
 
-x *= 2          #corresponds to     x = x * 2
+# x *= 2          #corresponds to     x = x * 2
 
 
-sheep += 1      #corresponds to     sheep = sheep + 1
+# sheep += 1      #corresponds to     sheep = sheep + 1
 
 
 
@@ -547,6 +576,14 @@ print("Hmm...", anything, "... Really?")
 
 
 
+print("Is the world Flat or Spherical?")
+your_response = input()
+print("So you think the world is " + your_response + "?")
+
+
+
+
+
 #2.6.2 The input() function with an argument
 
 anything = input("Tell me anything...")
@@ -592,7 +629,7 @@ print(anything, "to the power of 2 is", something)
 name = input("Enter name: ")
 age = int(input("Enter age: "))
 salary = int(input("Enter salary: "))
-print("My name is: " + str(name))
+print("My name is: " + name)
 print("I am " + str(age) + " years old.")
 print("I make " + str(salary) + " dollars.")
 
@@ -611,6 +648,17 @@ print("I make " + str(salary) + " dollars.")
 anything = int(input("Enter a number: "));
 something = anything ** 2.0;
 print(anything, "to the power of 2 is", str(something));
+
+
+
+fullName = input("Enter your full name: ")
+age = int(input("Enter your age: "))
+address = input("Enter your address: ")
+salary = int(input("Enter your salary: "))
+print(fullName + " is " + str(age) + ", lives in " + address + ", and makes $" + str(salary))
+
+
+
 
 # ///////////////////
 # using string within print...
@@ -712,7 +760,17 @@ print((("|" + " " * 10 + "|" + " " * 10 + "|" + " " * 10 + "|\n") * 5), end="")
 print("+" + 10 * "-" + "+"  + 10 * "-" + "+"  + 10 * "-" + "+")
 
 
-
+#       _________________
+#      /                /|
+#     /                / |
+#    /                /  |
+#   /                /   |
+#  /________________/    |                   
+# |                 |    /
+# |                 |   / 
+# |                 |  / 
+# |                 | /
+# |_________________|/
 
 
 
