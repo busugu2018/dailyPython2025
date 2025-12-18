@@ -35,7 +35,8 @@
 2 == 2. #true
 2 == 1 #false
 
-
+print(2==2)
+print(2==5)
 
 
 #3.1.4 Operators
@@ -444,7 +445,7 @@ print("The larger number is:", larger_number)
 
 
 
-# ==============================================================# ==============================================================
+# Random exercise, NONE TO DO WITH SECTION==============================================================# ==============================================================
 
 
 
@@ -864,6 +865,15 @@ while counter != 5:
 print("Outside loo: ", counter)
 
 
+
+counter = 9
+while counter:
+    print("Inside the loop.", counter)
+    counter -= 1
+print("Outside the loop.", counter)
+
+
+
 #========================================
 
 #3.2.4   LAB   Guess the secret number
@@ -898,27 +908,27 @@ for i in range(100):
 
 
 for i in range(10):
-    print("The value of i is currently" + i)
+    print("The value of i is currently " + str(i))
 
 for i in range(50):
-    print("The value of i is currently", i)
+    print("The value of i is currently ", str(i))
 
 
 for i in range(2, 8):
-    print("The value of i is currently", i)
+    print("The value of i is currently ", str(i))
 
 for counter in range(2, 12):
-    print("Inside the loop.", counter)
+    print("Inside the loop. ", str(counter))
 
 for counter in range(2, 8):
-    print("Inside the loop.", counter)
+    print("Inside the loop. ", str(counter))
 
 
 
 #3.2.6 More about for loop and the range() function
 
 for i in range(2, 8, 3):
-    print("The value of i is currently", i)
+    print("The value of i is currently", str(i))
 
     #Confusing......
 
@@ -1450,6 +1460,10 @@ print(numbers)
 
 numbers.insert(0, 222)
 print(len(numbers))
+print(numbers)
+
+numbers = [111, 7, 2, 1]
+numbers.insert(2, 222)
 print(numbers)
 
 numbers.insert(7, 0)

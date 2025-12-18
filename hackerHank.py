@@ -10,6 +10,19 @@ elif n % 2 == 0 and n > 20:
     print("Weird")
 
 
+#new test:
+x=37
+if 2<x<4:
+    print("Yes")
+elif 30<=x<=40:
+    print("Yes")
+else:
+    print("No")
+
+
+
+
+
 
 if __name__ == '__main__':
 n = int(input().strip())

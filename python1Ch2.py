@@ -59,6 +59,9 @@ print("Monty", "Python.", sep="*", end="*\n")
 print("Programming","Essentials","in: ")
 print("Python")
 
+print("What's your best programming language: ", end=" ")
+print("Python")
+
 
 #2.1.13 LAB 
 print("    *")
@@ -299,6 +302,36 @@ client_name = 'John Doe'
 print(var, account_balance, client_name)
 print(var)
 
+
+
+
+
+#Testing things on my own:
+var = 1
+var1 = 3
+var2 = 4
+var3 = 6
+account_balance = 1000.0
+account_balance1 = 234500.0
+account_balance2 = 95845.0
+account_balance3 = 500.0
+client_name = 'John Doe'
+client_name1 = 'Sara Loe'
+client_name2 = 'Matt Ketch'
+client_name3 = 'Jo MacTyer'
+print("var, account_balance, client_name")
+print(var, account_balance, client_name, sep=",       ")
+print(var1, account_balance2, client_name2, sep=",       ")
+print(var2, account_balance3, client_name3, sep=",       ")
+print(var3, account_balance3, client_name3, sep=",       ")
+
+
+#This would be the result: A Table
+# var, account_balance, client_name
+# 1,       1000.0,       John Doe
+# 3,       95845.0,       Matt Ketch
+# 4,       500.0,       Jo MacTyer
+# 6,       500.0,       Jo MacTyer
 
 #2.4.5  How to assign a new value to an already 
 # existing variable
