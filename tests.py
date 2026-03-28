@@ -1,8 +1,7 @@
-list = [12,3,4556,342,434,0]
-list1 = list[:]
-list2 = list[2:]
-list3 = list[2:4]
-print(list)
-print(list1)
-print(list2)
-print(list3)
+year = int(input("Enter  year: "))
+if year%400 == 0 and year%100 == 0:
+    print(str(year) + " is a leap year.")
+elif year%4 == 0 and year%100 != 0:
+    print(str(year) + " is a leap year.")
+else:
+    print(str(year) + " is a NOT a leap year.")
