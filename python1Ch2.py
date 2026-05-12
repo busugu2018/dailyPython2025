@@ -1,8 +1,7 @@
 #2.1 - Hello, World!
 print("Hello, World!")
 
-
-
+print("Hello everyone. We are back reviewing python once again.")
 
 
 
@@ -20,6 +19,33 @@ print()
 print("Buy one. \n Get one Free.")
 print()
 print("Name:...\nAge:...\nAddress:...")
+
+# new notes 5/12/2026
+print("John: Hello everyone.")
+print()
+print("Class: Hi Fred.")
+print()
+print("Pr.Carl: Put your homework here.")
+print()
+print("John: We had homework?")
+print()
+print("Class: Yes.")
+
+# La Cigale et la fourmi
+print("La Cigale, ayant chanté \nTout l'Été,")
+print("Se trouva fort dépourvue \nQuand la bise fut venue.")
+print("Pas un seul petit morceau \nDe mouche ou de vermisseau.")
+print("Elle alla crier famine \nChez la Fourmi sa voisine,")
+print("La priant de lui prêter \nQuelque grain pour subsister")
+print("Jusqu'à la saison nouvelle. \nJe vous paierai, lui dit-elle,")
+print("Avant l'Oût, foi d'animal, \nIntérêt et principal.")
+print("La Fourmi n'est pas prêteuse; \nC'est là son moindre défaut.")
+print("« Que faisiez-vous au temps chaud ? \nDit-elle à cette emprunteuse.")
+print("— Nuit et jour à tout venant \nJe chantais, ne vous déplaise.")
+print("— Vous chantiez ? j'en suis fort aise. \nEh bien !dansez maintenant. »")
+
+
+
 
 
 
@@ -49,8 +75,6 @@ print("My", "name", "is", "Monty", "Python.", sep="-")
 print("Her phone number is: ", end=" ")
 print("469", "305", "9365", sep="-")
 
-
-
 print("My", "name", "is", sep="_", end="*")
 print("Monty", "Python.", sep="*", end="*\n")
 #     My_name_is*Monty*Python.*
@@ -61,6 +85,15 @@ print("Python")
 
 print("What's your best programming language: ", end=" ")
 print("Python")
+
+
+# new notes 5/12/2026
+print("The book ISBN number is: ", end=" ")
+print("978", "3", "16", "148410", "0", sep="-")
+
+
+
+
 
 
 #2.1.13 LAB 
@@ -74,12 +107,48 @@ print("  *   *")
 print("  *****")
 
 
+# new notes 5/12/2026
+print("    *                 *")
+print("   * *               * *")
+print("  *   *             *   *")
+print(" *     *           *     *")
+print("***   ***         ***   ***")
+print("  *   *             *   *")
+print("  *   *             *   *")
+print("  *****             *****")
+
+
+#============================================
+print("    *                 *")
+print("   * *               * *")
+print("  *   *             *   *")
+print(" *     *           *     *")
+print("***   ***         ***   ***")
+print("  *   *             *   *")
+print("  *   *             *   *")
+print("  *****             *****")
+
+print()
+
+print("  *****             *****")
+print("  *   *             *   *")
+print("  *   *             *   *")
+print("***   ***         ***   ***")
+print(" *     *           *     *")
+print("  *   *             *   *")
+print("   * *               * *")
+print("    *                 *")
+
+#============================================
+
 #2.1.15
 print('Greg\'s book.')
 print("'Greg's book.'")
 print('"Greg\'s book."')
 print("Greg\'s book.")
 
+# new notes 5/12/2026
+print("Greg's book.")
 
 
 
@@ -93,6 +162,9 @@ print("87")
 
 #2.2.2 Integers
 print(111111111111)
+
+# new notes 5/12/2026
+print(7563215489658745632215688795566655485)
 
 
 
@@ -227,6 +299,20 @@ print(-2//4) #math.floor
 # |_________________|/
 
 
+# new notes 5/12/2026
+#        _________________
+#       /                /|
+#      /                / |
+#     /                /  |
+#    /                /   |
+#   /                /    |
+#  /________________/     |                   
+# |                 |     /
+# |                 |    / 
+# |                 |   / 
+# |                 |  /
+# |                 | /
+# |_________________|/
 
 
 
@@ -270,6 +356,10 @@ print(-2//4) #math.floor
 # 10t (does not begin with a letter)
 # !important (does not begin with a letter)
 # exchange rate (contains a space)
+
+
+
+
 
 
 #Incorrect Names
@@ -324,6 +414,61 @@ print(var, account_balance, client_name, sep=",       ")
 print(var1, account_balance2, client_name2, sep=",       ")
 print(var2, account_balance3, client_name3, sep=",       ")
 print(var3, account_balance3, client_name3, sep=",       ")
+
+
+
+# new notes 5/12/2026
+
+id1 = 1
+id2 = 2
+id3 = 3
+id4 = 4
+id5 = 5
+id6 = 6
+id7 = 7
+id8 = 8
+id9 = 9
+
+name1 = "Lekouga Lebany"
+name2 = "Mabanga Mbongo"
+name3 = "Koumba Ndoum"
+name4 = "Nzieng Zong"
+name5 = "Ndong Ndong"
+name6 = "Zang Minang"
+name7 = "Bakuku Mbidng"
+name8 = "Okoulou Kouma"
+name9 = "Ekoume Mbo"
+
+dob1 = ("9/12/2013")
+dob2 = ("2/2/2014")
+dob3 = ("1/19/2011")
+dob4 = ("3/12/2015")
+dob5 = ("2/8/2009")
+dob6 = ("7/2/2015")
+dob7 = ("8/23/2010")
+dob8 = ("5/30/2014")
+dob9 = ("11/12/2015")
+
+schoolName =  "College Bessieux"
+
+print("id,           name,           dob",)
+print(id1, name1, dob1, sep=",       ")
+print(id2, name2, dob2, sep=",       ")
+print(id3, name3, dob3, sep=",       ")
+print(id4, name4, dob4, sep=",       ")
+print(id5, name5, dob5, sep=",       ")
+print(id6, name6, dob6, sep=",       ")
+print(id7, name7, dob7, sep=",       ")
+print(id8, name8, dob8, sep=",       ")
+print(id9, name9, dob9, sep=",       ")
+
+
+
+
+
+
+
+
 
 
 #This would be the result: A Table
