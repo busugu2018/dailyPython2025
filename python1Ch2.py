@@ -463,20 +463,20 @@ print(id8, name8, dob8, sep=",       ")
 print(id9, name9, dob9, sep=",       ")
 
 
-
-
-
-
-
-
-
-
 #This would be the result: A Table
 # var, account_balance, client_name
 # 1,       1000.0,       John Doe
 # 3,       95845.0,       Matt Ketch
 # 4,       500.0,       Jo MacTyer
 # 6,       500.0,       Jo MacTyer
+
+
+
+
+
+
+
+
 
 #2.4.5  How to assign a new value to an already 
 # existing variable
@@ -736,8 +736,11 @@ print(x8, y8) # 2 1
 
 
 
+# new notes 5/12/2026
 
-
+name = input("What's your name bro?: ")
+age = int(input("And your age?: "))
+print("My name and age are: " + name + " I am " + str(age) + " Years old.")
 
 
 
