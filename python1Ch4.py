@@ -26,7 +26,8 @@
 
 
 
-#=================================================================================
+
+
 
 #Section 4.1.2: Decomposition
 
@@ -39,7 +40,9 @@
 
 
 
-# =================================================================================
+
+
+
 
 # 4.1.3 Where do the functions come from?
 
@@ -51,7 +54,10 @@
 # You can write your own functions directly from your code and use them freely
 
 
-# =================================================================================
+
+
+
+
 
 # 4.1.4 Your first function
 
@@ -68,6 +74,8 @@ c = int(input())
 
 
 # Fixing it:
+# def = define 
+# message = function name
 
 def message():
     print("Enter a value: ")
@@ -120,11 +128,15 @@ c = int(input())
 
 
 
-
-
+#===============================================================
 
 # 4.2 Section 2 – How functions communicate with their environment
 # 4.2.1 Parameterized functions
+
+# def = define 
+# message = function name
+# number = parameter.  -----> parameters are inputs the function receives
+#                      -----> number is just a variable that exists inside the function
 
 def message(number):
     print("Enter a number:", number)
@@ -151,17 +163,6 @@ print(number)
 
 
 
-
-
-
-
-
-
-
-
-
-
-
 def hello(name): # defining a function, function name hello, argument is name
     print("Hello,", name) # body of the function
  
@@ -172,12 +173,292 @@ hello(name)  # calling the function
 
 
 
+
+
+
+
+
+def message(what, number):
+    print("Enter", what, "number", number)
+
+message("telephone", 11)
+message("price", 5)
+message("number", "number")
+
+
+
+# My own:
+def message(what, name):
+    print(what, name)
+message("FirstName: ", "Brittani")
+message("MiddleName: ", "Nicole")
+message("LastName: ", "Hinson")
+
+
+
+
+# 4.2.2 Positional parameter passing
+
+def my_function(a, b, c):
+    print(a, b, c)
+
+my_function(1, 2, 3)
+
+
+# My own
+def my_function(a, b, c):
+    print(a, b, c)
+
+my_function("Name, ", "Age, ", "DOB.")
+
+
+
+
+
+
+
+def introduction(first_name, last_name):
+    print("Hello, my name is", first_name, last_name)
+
+introduction("Luke", "Skywalker")
+introduction("Jesse", "Quick")
+introduction("Clark", "Kent")
+
+
+
+
+def introduction(first_name, last_name):
+    print("Hello, my name is", first_name, last_name)
+
+introduction("Skywalker", "Luke")
+introduction("Quick", "Jesse")
+introduction("Kent", "Clark")
+
+
+
+
+
+
+
+
+
+
+# 4.2.3 Keyword argument passing
+
+def introduction(first_name, last_name):
+    print("Hello, my name is", first_name, last_name)
+
+introduction(first_name = "James", last_name = "Bond")
+introduction(last_name = "Skywalker", first_name = "Luke")
+
+
+
+
+def introduction(first_name, last_name):
+    print("Hello, my name is", first_name, last_name)
+
+introduction(surname="Skywalker", first_name="Luke") # It'll throw an error here - a non existing parameter "surname"
+
+
+
+
+
+# 4.2.4 Mixing positional and keyword arguments
+
+def adding(a, b, c):
+    print(a, "+", b, "+", c, "=", a + b + c)
+adding(1, 2, 3)
+adding(c = 1, a = 2, b = 3)
+adding(3, c = 1, b = 2)
+adding(3, a = 1, b = 2) # error; a = 3 and a = 1, so a is twice. FALSE
+adding(4, 3, c = 2)
+
+
+
+
+# 4.2.5 Parametrized functions – more details
+
+def introduction(first_name, last_name="Smith"):
+     print("Hello, my name is", first_name, last_name)
+introduction("James", "Doe")
+introduction("Henry")
+introduction(first_name="William")
+
+
+
+
+def introduction(first_name="John", last_name="Smith"):
+    print("Hello, my name is", first_name, last_name)
+introduction()
+introduction(last_name="Hopkins")
+
+
+
+
+
+
+
+
+
+# 4.2.6 SECTION SUMMARY
+
+def hi(name):
+    print("Hi,", name)
+hi("Greg")
+
+
+
+def hi_all(name_1, name_2):
+    print("Hi,", name_2)
+    print("Hi,", name_1)
+hi_all("Sebastian", "Konrad")
+
+
+
+def address(street, city, postal_code):
+    print("Your address is:", street, "St.,", city, postal_code)
+s = input("Street: ")
+p_c = input("Postal Code: ")
+c = input("City: ")
+address(s, c, p_c)
+
+
+
+# Ex. 1
+def subtra(a, b):
+    print(a - b)
+subtra(5, 2)    # outputs: 3
+subtra(2, 5)    # outputs: -3
+
+
+# Ex. 2
+def subtra(a, b):
+    print(a - b)
+subtra(a=5, b=2)    # outputs: 3
+subtra(b=2, a=5)    # outputs: 3
+
+# Ex. 3
+def subtra(a, b):
+    print(a - b)
+subtra(5, b=2)    # outputs: 3
+subtra(5, 2)    # outputs: 3
+
+
+
+
+
+
+def subtra(a, b):
+    print(a - b)
+subtra(5, b=2)    # outputs: 3
+# subtra(a=5, 2)    # Syntax Error
+
+
+
+
+def name(first_name, last_name="Smith"):
+    print(first_name, last_name)
+
+name("Andy")    # outputs: Andy Smith
+name("Betty", "Johnson")    # outputs: Betty Johnson (the keyword argument replaced by "Johnson")
+
+
+
+
+
+# 4.2.7 SECTION QUIZ
+
+def intro(a="James Bond", b="Bond"):
+    print("My name is", b + ".", a + ".")
+intro()
+
+
+
+def intro(a="James Bond", b="Bond"):
+    print("My name is", b + ".", a + ".")
+intro(b="Sean Connery")
+
+
+def intro(a, b="Bond"):
+    print("My name is", b + ".", a + ".")
+intro("Susan")
+
+
+# def add_numbers(a, b=2, c):
+#     print(a + b + c)
+# add_numbers(a=1, c=3)
+
+# SyntaxError - a non-default argument (c) follows a default argument (b=2).
+
+
+
+
+
+
+
 #===============================================================
-#4.3 Section 3 – Returning a result from a function  
+# 4.3 Section 3 – Returning a result from a function  
+
+# 4.3.1 Effects and results: the return instruction
+
+def happy_new_year(wishes = True):
+    print("Three...")
+    print("Two...")
+    print("One...")
+    if not wishes:
+        return
+
+    print("Happy New Year!")
 
 
 
 
+
+
+def happy_new_year(wishes = True):
+    print("Three...")
+    print("Two...")
+    print("One...")
+    if not wishes:
+        return
+
+    print("Happy New Year!")
+happy_new_year()
+happy_new_year(False)
+
+
+
+
+def boring_function():
+    print("'Boredom Mode' ON.")
+    return 123
+
+print("This lesson is interesting!")
+boring_function()
+print("This lesson is boring...")
+
+
+
+# 4.3.2 A few words about None
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#===============================================================
 
 
 # Quick OOP:
@@ -229,3 +510,86 @@ ticket1.set_destintion("Hong Kong")
 # Access updated values
 print("Modified destinatiom: ", ticket1.get_destintion())
 print("Modified price: ", ticket1.get_price())
+
+
+
+
+
+
+
+
+
+
+
+# ==============================================================================
+#https://www.youtube.com/watch?v=rLyYb7BFgQI
+
+
+class Microwave: 
+    def __init__(self, brand: str, power_rating: str) -> None:
+        self.brand = brand
+        self.power_rating = power_rating
+
+smeg: Microwave = Microwave(brand='Smeg', power_rating='B')
+print(smeg)
+print(smeg.brand)
+print(smeg.power_rating)
+
+bosh: Microwave = Microwave(brand='Bosh', power_rating='C')
+print(bosh)
+print(bosh.brand)
+print(bosh.power_rating)
+
+# ==============================================================================
+
+class Microwave: 
+    def __init__(self, brand: str, power_rating: str) -> None:
+        self.brand = brand
+        self.power_rating = power_rating
+        self.turned_on: bool = False
+
+    def tun_on(self) -> None:
+        if self.turned_on: 
+            print(f'Microwave ({self.brand}) is already turned on.')
+        else:
+            self.turned_on = True
+            print(f'Microwave ({self.brand}) is now turned on.')
+
+    # def turn_off(self) -> None:
+    #     if self.turned_on: 
+    #         self.turned_on = False
+    #         print(f'Microwave ({self.brand}) is now turned on.')
+    #     else:
+    #         # self.turned_on = True
+    #         print(f'Microwave ({self.brand}) is already turned off.')
+
+    def turn_off(self) -> None:
+        if self.turned_on:
+            self.turned_on = False
+            print(f'Microwave ({self.brand}) is now turned off.')
+        else:
+            print(f'Microwave ({self.brand}) is already turned off.')
+
+    def run(self, seconds: int) -> None:
+        if self.turned_on:
+            print(f'Running ({self.brand}) for {seconds} seconds')
+        else:
+            print(f'A mystical force whispers: "Turn on your Microwave first.')
+
+smeg: Microwave = Microwave(brand='Smeg', power_rating='B')
+smeg.tun_on()
+smeg.run(30)
+smeg.turn_off()
+smeg.run(10)
+
+
+
+
+# print(smeg)
+# print(smeg.brand)
+# print(smeg.power_rating)
+
+# bosh: Microwave = Microwave(brand='Bosh', power_rating='C')
+# print(bosh)
+# print(bosh.brand)
+# print(bosh.power_rating)
