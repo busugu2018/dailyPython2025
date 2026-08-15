@@ -417,6 +417,29 @@ print(var3, account_balance3, client_name3, sep=",       ")
 
 
 
+
+
+
+var = 1
+var1 = 3
+var2 = 4
+var3 = 6
+account_balance = 1000.0
+account_balance1 = 234500.0
+account_balance2 = 95845.0
+account_balance3 = 500.0
+client_name = 'John Doe'
+client_name1 = 'Sara Loe'
+client_name2 = 'Matt Ketch'
+client_name3 = 'Jo MacTyer'
+print("var, account_balance, client_name")
+print(var, account_balance, client_name, sep=",       |   ")
+print(var1, account_balance2, client_name2, sep=",       |   ")
+print(var2, account_balance3, client_name3, sep=",       |   ")
+print(var3, account_balance3, client_name3, sep=",       |   ")
+
+
+
 # new notes 5/12/2026
 
 id1 = 1
@@ -740,7 +763,7 @@ print(x8, y8) # 2 1
 
 name = input("What's your name bro?: ")
 age = int(input("And your age?: "))
-print("My name and age are: " + name + " I am " + str(age) + " Years old.")
+print("I am " + name + " and I am " + str(age) + " years old.")
 
 
 
@@ -817,6 +840,24 @@ print("I make " + str(salary) + " dollars.")
 
 
 
+name = str(input("Enter your name: "))
+age = int(input("Enter your age: "))
+salary = int(input("Enter how much you wanna make a year: "))
+print("My naame is " + name)
+print("I am " + str(age) + " years old.")
+print("I will make " + "$" + str(salary) + " this year.")
+
+#Another way to write it:
+name = str(input("Enter your name: "))
+age = int(input("Enter your age: "))
+salary = int(input("Enter how much you wanna make a year: "))
+print("My naame is " + name)
+print(f"I am {age} years old.")
+print(f"I will make ${salary} this year.")
+
+
+
+
 
 # #2.6.4 The input() function – prohibited operations
 
@@ -849,6 +890,13 @@ print("I am actually " + str(new_age) + " years old.")
 
 
 
+age1 = int(input("How old are you again?: "))
+new_age = age1+1
+print("I am actually " + str(new_age) + " years old.")
+print(f"I am now {new_age} years old.")
+
+
+
 #Fixing Input issue on Sublime text
 #Sublime Text-->TOOLS-->bUILD sYSTEM-->nEW bUILD-->Paste it.
 
@@ -871,6 +919,13 @@ print(anything, "to the power of 2 is", something)
 anything = float(input("Enter a number: "))
 something = anything ** 2.0
 print(anything, "to the power of 2 is", something)
+
+anything = float(input("Enter a number: "))
+something = anything ** float(2.0)
+print(f"{anything} to the power of 2 is {something}")
+
+
+
 
 
 #2.6.6 More about input() and type casting

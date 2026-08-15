@@ -236,7 +236,12 @@ introduction("Kent", "Clark")
 
 
 
+def message(what, number):
+    print("Enter", what, "number", number)
 
+message("telephone", 11)
+message("price", 5)
+message("Age", 35)
 
 
 
@@ -429,6 +434,29 @@ happy_new_year(False)
 
 
 
+
+
+def happy_new_year(wishes = True):
+    print("Three...")
+    print("Two...")
+    print("One...")
+    if not wishes:
+        return
+
+    print("Happy New Year!")
+happy_new_year()
+happy_new_year()
+happy_new_year(None)
+happy_new_year()
+happy_new_year(True)
+happy_new_year()
+happy_new_year()
+happy_new_year(False)
+
+
+
+
+
 def boring_function():
     print("'Boredom Mode' ON.")
     return 123
@@ -440,6 +468,107 @@ print("This lesson is boring...")
 
 
 # 4.3.2 A few words about None
+
+print(None + 2) # TypeError: unsupported operand type(s) for +: 'NoneType' and 'int'
+
+value = None
+if value is None:
+    print("Sorry, you don't carry any value")
+
+
+
+def strange_function(n):
+    if(n % 2 == 0):
+        return True
+print(strange_function(2))
+print(strange_function(1))
+
+
+
+
+def evenTest(num):
+    if (num%2==0):
+        return True
+print(evenTest(6))
+print(evenTest(2))
+print(evenTest(5))
+print(evenTest(9))
+print(evenTest(8))
+
+
+
+
+
+
+
+
+
+# 4.3.3 Effects and results: lists and functions
+
+def list_sum(lst):
+    s = 0
+
+    for elem in lst:
+        s += elem # It means  ------->  s = s + elem
+
+    return s
+
+print(list_sum([5, 4, 3]))  # Your first call works: because [5, 4, 3] is a list.
+
+# Step by step operation:
+
+# Step 1:
+
+# s = s + 5
+# s = 0 + 5
+# s = 5
+
+# Step 2;
+
+# s = s + 4
+# s = 5 + 4
+# s = 9
+
+# Step 3:
+
+# s = s + 3
+# s = 9 + 3
+# s = 12
+
+# Final: s = 12
+
+
+
+print(list_sum([0,7,-49,90])) # 0+0+7-49+90
+
+
+
+
+print(list_sum(5))    # But this causes an error: because 5 is an integer, not a list.
+
+
+
+
+
+
+
+
+
+
+def strange_list_fun(n):
+    strange_list = []
+    
+    for i in range(0, n):
+        strange_list.insert(0, i)
+    
+    return strange_list
+
+print(strange_list_fun(5))
+
+
+
+
+# 4.3.4   LAB   A leap year: writing your own functions
 
 
 

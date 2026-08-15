@@ -1,7 +1,11 @@
-def boring_function():
-    print("'Boredom Mode' ON.")
-    return 123
+x = 100
+s = 34
+y = 456
 
-print("This lesson is interesting!")
-boring_function()
-print("This lesson is boring...")
+print("Which letter is the largest?")
+if x>s & x>y:
+    print("x is the largest number.")
+elif s>x & s>y:
+    print("s is the largest number.")
+elif y>x & y>s:
+    print("y is the largest number.")
