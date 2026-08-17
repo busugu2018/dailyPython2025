@@ -1,11 +1,6 @@
-x = 100
-s = 34
-y = 456
-
-print("Which letter is the largest?")
-if x>s & x>y:
-    print("x is the largest number.")
-elif s>x & s>y:
-    print("s is the largest number.")
-elif y>x & y>s:
-    print("y is the largest number.")
+print("The break instruction: ")
+for i in range(1, 16):
+    if i == 13:
+        break
+    print("Inside the loop. ", i)
+print("Outside the loop.")

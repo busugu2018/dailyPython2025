@@ -282,7 +282,7 @@ num2 = int(input("Enter number 2: "))
 num3 = int(input("Enter number 3: "))
 smallestNum = min(num1, num2, num3)
 print(str(smallestNum) + " is the smallest number of them all.")
-
+print(f"{smallestNum} is the smallest number of them all.")
 
 
 
@@ -362,8 +362,8 @@ else:
 #3.1 Boolean values, Conditional execution, loops, lists and 
 # list processing, logical bitwise operations
 
-weather = 'bad';
-if (weather == 'good'):
+weather = 'bad'
+if weather == 'good':
     print("Le's go walk.")
 else:
     print("Let's just stay home and watch a movie.")
@@ -783,6 +783,8 @@ while number != -1:
 print("The largest number is:", largest_number)
 
 
+
+
 #smallest Number
 smallest_number = 999999999
 number = int(input("Enter a number or type 1 to stop: "))
@@ -850,7 +852,7 @@ print("Even numbers count:", even_numbers)
 
 
 
-#Better version
+#Better version (just with no comments):
 oddNumbers = 0 
 evenNumbers = 0 
 number = int(input("Enter a number or type 0 to stop: "))
@@ -890,6 +892,14 @@ while counter:
 print("Outside the loop.", counter)
 
 
+
+
+
+counter = 0
+while counter != 5:
+    print("Inside the loop.", counter)
+    counter += 1
+print("Outside the loop.", counter)
 
 #========================================
 
