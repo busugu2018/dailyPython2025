@@ -868,6 +868,147 @@ print("Even numbers count:", evenNumbers)
 
 
 
+
+
+
+#same problem:
+oddNumber = 0
+evenNumber = 0
+numberEntered = int(input("Enter your random number or type 0 to stop it: "))
+
+while numberEntered != 0:
+    if numberEntered % 2 == 1:
+        oddNumber+=1
+    else:
+        evenNumber+=1
+    numberEntered = int(input("Enter a number or type 0 to stop: "))
+print(f"There were {oddNumber} odd numbers randomly added.")
+print(f"There were {evenNumber} even numbers randomly added.")
+
+
+
+
+
+#same problem:
+oddNum = 0 
+evenNum = 0
+num = int(input("Enter num or 0 to exit: "))
+
+while num != 0:
+    if num % 2 == 0:
+        evenNum+=1
+    else:
+        oddNum+=1
+    num = int(input("Enter num or 0 to exit: "))
+print(f"{oddNum} odd numbers were entered.")
+print(f"{evenNum} even numbers were entered.")
+
+
+
+#========================================================================>
+
+#random exercise PRIME NUMBERS not in lesson:
+# primeNum = 0
+# nonPrimeNum = 0
+
+
+
+
+# num = int(input("Enter "))
+# x = int(input("Enter the denominator: "))
+
+# while num != 0 & num != 1:
+#     if (num % 1 == 0) & (num % num == 0):
+#         print("Every Number applies: ")
+#     elif num % x = 
+
+
+
+
+
+
+
+
+# x = int(input("Enter a random number or type 0 or 1 to stop it: "))
+# y = int(input("Enter y: "))
+
+# for x in range (1, 30):
+#     while y != 0 & y != 1 & y != x:
+#         if x % y == 0:
+#             print("The number is Prime")
+
+
+
+
+
+
+number = int(input("Enter a number: "))
+
+if number <= 1:
+    print("Not prime")
+else:
+    prime = True
+
+    for i in range(2, number):
+        if number % i == 0:
+            prime = False
+            break
+
+    if prime:
+        print("Prime")
+    else:
+        print("Not prime")
+
+
+
+
+#1 - 1. Using a for...else — clean and Pythonic
+
+num = int(input("Enter a number: "))
+
+if num <= 1:
+    print("Not prime")
+else:
+    for i in range(2, num):
+        if num % i == 0:
+            print("Not prime")
+            break
+    else:
+        print("Prime")
+
+
+
+
+
+#3 - This is a good approach once you're learning functions:
+
+def is_prime(num):
+    if num <= 1:
+        return False
+
+    for i in range(2, int(num ** 0.5) + 1):
+        if num % i == 0:
+            return False
+
+    return True
+
+
+number = int(input("Enter a number: "))
+
+if is_prime(number):
+    print("Prime")
+else:
+    print("Not prime")
+
+
+
+
+#========================================================================>
+
+
+
+
+
 #counter:
 counter = 5
 while counter != 0:
