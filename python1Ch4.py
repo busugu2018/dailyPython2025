@@ -26,6 +26,10 @@
 
 
 
+# def message(number):
+#     ###
+
+
 
 
 
@@ -77,8 +81,13 @@ c = int(input())
 # def = define 
 # message = function name
 
+
+# def function(parameter):
+#     ###
+
 def message():
-    print("Enter a value: ")
+    print("Enter a value: ") # NOT DEPLOYED - OR - NO RESPONSES
+
 
 
 
@@ -87,7 +96,7 @@ def message():
 
 print("We start here.")
 print("We end here.")
-
+# Responses are generated
 
 
 
@@ -119,6 +128,12 @@ c = int(input())
 
 
 
+# my own:
+def message():
+    print("What your name?")
+message()
+firstName = str(input("My first name is: "))
+lastName = str(input("My last name is: "))
 
 
 
@@ -140,7 +155,7 @@ c = int(input())
 
 def message(number):
     print("Enter a number:", number)
-
+# Nothing out
 
 
 #This looks better, for sure:
@@ -148,7 +163,7 @@ def message(number):
     print("Enter a number:", number)
 
 message()
-
+# Throws Error
 
 
 
@@ -162,7 +177,7 @@ print(number)
 
 
 
-
+# ============== IMPORTANT =================
 def hello(name): # defining a function, function name hello, argument is name
     print("Hello,", name) # body of the function
  
@@ -171,7 +186,7 @@ name = input("Enter your name: ")
  
 hello(name)  # calling the function
 
-
+# ==========================================
 
 
 
@@ -186,6 +201,13 @@ message("price", 5)
 message("number", "number")
 
 
+def message(what, number):
+    print("Enter ", what, "number ", number)
+message("telephoe", 11)
+message("price", 5)
+message("id", 7)
+
+
 
 # My own:
 def message(what, name):
@@ -196,6 +218,52 @@ message("LastName: ", "Hinson")
 
 
 
+def message(firstName, lastName):
+    print("My first name is", firstName, "and my lastName is", lastName)
+message("Jo", "Porretta")
+message("John", "Kappo")
+message("Max", "Smith")
+
+
+
+
+def myTable(name, age, email):
+    print(name, "|", age, "|", email)
+myTable("name ", "age ", " email")
+myTable("John Gray", 45, "johnngray21@gmail.com")
+myTable("Ella May", 30, "emay3945@gmail.com")
+myTable("Loree Mac", 24, "lmac4567@gmail.com")
+
+
+
+
+
+
+def myTable(name, age, email):
+    print(name, "        |     ", age, "        |     ", email)
+    print("--------------------------------------")
+myTable("name ", "age ", " email")
+myTable("John Gray", 45, "johnngray21@gmail.com")
+myTable("Ella May", 30, "emay3945@gmail.com")
+myTable("Loree Mac", 24, "lmac4567@gmail.com")
+
+
+
+
+
+# NO - REDO IT
+def myTable(name, age, email):
+    print(name, "        |     ", age, "        |     ", email)
+myTable("name ", "age ", " email")
+myTable("----------------- ", "----------------- ", "----------------")
+myTable("John Gray", 45, "johnngray21@gmail.com")
+myTable("Ella May", 30, "emay3945@gmail.com")
+myTable("Loree Mac", 24, "lmac4567@gmail.com")
+
+
+
+
+
 
 # 4.2.2 Positional parameter passing
 
@@ -203,6 +271,19 @@ def my_function(a, b, c):
     print(a, b, c)
 
 my_function(1, 2, 3)
+
+
+
+
+
+# Generate this ----> "My info are: " instead of "1 2 3"
+def my_function(a, b, c):
+    print("My info are: ")
+
+my_function(1, 2, 3)
+
+
+
 
 
 # My own
@@ -246,6 +327,15 @@ message("Age", 35)
 
 
 
+# Mine
+def operation(num1, num2):
+    print("Result is,", num1/num2)
+operation(5,2)
+operation(10,2)
+operation(10000,20)
+
+
+
 
 
 # 4.2.3 Keyword argument passing
@@ -255,6 +345,13 @@ def introduction(first_name, last_name):
 
 introduction(first_name = "James", last_name = "Bond")
 introduction(last_name = "Skywalker", first_name = "Luke")
+
+
+
+def introduction(first_name, last_name):
+    print("Hello, my name is", first_name, last_name)
+introduction("James", "Gill")
+
 
 
 
@@ -298,8 +395,12 @@ introduction()
 introduction(last_name="Hopkins")
 
 
-
-
+# Mine
+def operation(num1, num2):
+    print("Result is,", num1/num2)
+operation(5,2)
+operation(10,2)
+operation(10000,20)
 
 
 

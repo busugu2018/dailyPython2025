@@ -1,15 +1,10 @@
-primeNum = 0
-notPrimeNum = 0
+def happy_new_year(wishes = True):
+    print("Three...")
+    print("Two...")
+    print("One...")
+    if not wishes:
+        return
 
-num = int(input("Enter a number: "))
-
-while num != 0:
-    if num <= 1:
-        prime = False
-    else:
-        for i in range(2, num):
-            if num % i == 0:
-                prime = True
-                break
-        else:
-            print("Prime")
+    print("Happy New Year!")
+happy_new_year()
+happy_new_year(False)

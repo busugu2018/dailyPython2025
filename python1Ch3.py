@@ -1003,6 +1003,29 @@ else:
 
 
 
+
+
+
+
+
+
+#Don't use that:
+primeNum = 0
+notPrimeNum = 0
+
+num = int(input("Enter a number: "))
+
+while num != 0:
+    if num <= 1:
+        prime = False
+    else:
+        for i in range(2, num):
+            if num % i == 0:
+                prime = True
+                break
+        else:
+            print("Prime")
+
 #========================================================================>
 
 
@@ -1026,6 +1049,7 @@ print("Outside loo: ", counter)
 
 
 
+#BAD:
 counter = 9
 while counter:
     print("Inside the loop.", counter)
@@ -1073,7 +1097,8 @@ for i in range(100):
     # do_something()
     pass
 
-
+for i in range(10):
+    print("The value of i is currently", i)
 
 for i in range(10):
     print("The value of i is currently " + str(i))
@@ -1091,12 +1116,22 @@ for counter in range(2, 12):
 for counter in range(2, 8):
     print("Inside the loop. ", str(counter))
 
+for counter in range(2, 8):
+    print(f"Inside loop is {counter}.")
+
 
 
 #3.2.6 More about for loop and the range() function
 
 for i in range(2, 8, 3):
     print("The value of i is currently", str(i))
+
+for counter in range(2, 8, 3):
+    print(f"Inside loop is {counter}.")
+
+# Answer:
+# Inside loop is 2.
+# Inside loop is 5.
 
     #Confusing......
 
@@ -1116,6 +1151,64 @@ for i in range(1, 16):
         break
     print("Inside the loop. ", i)
 print("Outside the loop.")
+
+
+
+print("The break instruction: ")
+for i in range(1, 3):
+    if i == 6:
+        break
+    print("inside loop ", i)
+print("Out the loop.")
+#1, 2
+
+
+
+print("The break instruction: ")
+for i in range(8, 3):
+    if i == 6:
+        break
+    print("inside loop ", i)
+print("Out the loop.")
+#nothing, just a break
+
+
+
+
+print("The break instruction: ")
+for i in range(3, 9):
+    if i >= 6:
+        break
+    print("inside loop ", i)
+print("Out the loop.")
+
+# The break instruction: 
+# inside loop  3
+# inside loop  4
+# inside loop  5
+# Out the loop.
+
+
+
+print("The break instruction: ")
+for i in range(3, 9):
+    if i <= 6:
+        break
+    print("inside loop ", i)
+print("Out the loop.")
+
+# The break instruction: 
+# Out the loop.
+
+
+
+
+
+
+
+
+
+
 
 
 # continue - example
@@ -1801,6 +1894,17 @@ print(my_list)
 
 
 
+
+
+#SAME
+my_list = [8, 10, 6, 2, 4]
+
+for i in range(len(my_list)):
+    for j in range(len(my_list) - 1):
+        if my_list[j] > my_list[j + 1]:
+            my_list[j], my_list[j + 1] = my_list[j + 1], my_list[j]
+
+print(my_list)
 
 
 
