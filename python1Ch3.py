@@ -245,6 +245,64 @@ elif y>x & y>s:
 
 
 
+# Chat marks this as bad: 
+# and → logical conditions
+# & → bitwise AND
+# & operates on the binary bits of integers.    print(5 & 3)
+
+x = int(input("Enter the first number: "))
+s = int(input("Enter the second number: "))
+y = int(input("Enter the third number: "))
+
+print("Which letter is the largest?")
+if x>s & x>y:
+    print("x is the largest number.")
+elif s>x & s>y:
+    print("s is the largest number.")
+elif y>x & y>s:
+    print("y is the largest number.")
+
+
+
+
+
+
+x = int(input("Enter the first number: "))
+s = int(input("Enter the second number: "))
+y = int(input("Enter the third number: "))
+
+print("Which number is the largest?")
+
+if x > s and x > y:
+    print("x is the largest number.")
+
+elif s > x and s > y:
+    print("s is the largest number.")
+
+elif y > x and y > s:
+    print("y is the largest number.")
+
+
+
+
+
+
+# use that here alone in python
+# not for conditionns
+print(5 & 3)
+print(51 & 3)
+print(2 & 3)
+print(5 & 34)
+print(25 & 30)
+print(1 & 2)
+print(3 & 3)
+print(0 & 3)
+
+
+
+
+
+
 
 #3.1.9 Pseudocode and introduction to loops
 
@@ -381,6 +439,25 @@ elif ((weather1 < 75) and (weather1 > 60)):
     print("The weather is " + str(weather1) + ", I'll stay home.")
 else:
     print("It's freezing, I'll stay my a** home.")
+
+
+
+
+
+
+weather1 = int(input("What temperature is it?: "))
+if (weather1 >= 65 and weather1 <= 85):
+    print(f"The weather is {weather1}, go enjoy the sun.")
+elif (weather1 > 85):
+    print(f"The weather is {weather1}, it's pretty hot today, I'll stay home.")
+else:
+    print("It's freezing, I'll stay my a** home.")
+
+
+
+
+
+
 
 #The if-elif-else statement, e.g.:
 x = 10
@@ -589,7 +666,7 @@ print("The largest number is:", largest_number)
 
 
 
-
+# NOT CORRECT --- THERE IS A BUGG HERE
 n1 = int(input("Enter n1: "))
 n2 = int(input("Enter n2: "))
 n3 = int(input("Enter n3: "))
@@ -602,6 +679,22 @@ if n3 > n2:
     largestNumber = n3;
 print("The largest number is: " + str(largestNumber))
 
+
+
+
+# CORRECTION
+n1 = int(input("Enter n1: "))
+n2 = int(input("Enter n2: "))
+n3 = int(input("Enter n3: "))
+
+largestNumber = n1
+
+if n2 > largestNumber:
+    largestNumber = n2
+
+if n3 > largestNumber:
+    largestNumber = n3
+print("The largest number is: " + str(largestNumber))
 
 
 # ==============================================================# ==============================================================

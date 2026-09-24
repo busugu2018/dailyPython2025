@@ -10,9 +10,20 @@
 # happy_new_year(False)
 
 
-fullName = input("Enter your full name: ")
-age = int(input("Enter your age: "))
-address = input("Enter your address: ")
-salary = int(input("Enter your salary: "))
-print(fullName + " is " + str(age) + ", lives in " + address + ", and makes $" + str(salary) + ".")
-print(f"{fullName} is {age}, lives in {address}, and makes ${salary}.")
+
+n1 = int(input("Enter n1: "))
+n2 = int(input("Enter n2: "))
+n3 = int(input("Enter n3: "))
+
+largestNumber = n1
+
+if n2 > largestNumber:
+    largestNumber = n2
+
+if n3 > largestNumber:
+    largestNumber = n3
+print("The largest number is: " + str(largestNumber))
+
+
+
+
