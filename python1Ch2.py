@@ -65,6 +65,7 @@ print("Monty Python.")
 
 print("His name is Jesus", "He was killed on the cross.", end=" ")
 print("For claiming He was the savior of the world.")
+# His name is Jesus He was killed on the cross. For claiming He was the savior of the world.
 
 
 print("My", "name", "is", "Monty", "Python.", sep="-")
@@ -74,6 +75,10 @@ print("My", "name", "is", "Monty", "Python.", sep="-")
 
 print("Her phone number is: ", end=" ")
 print("469", "305", "9365", sep="-")
+# Her phone number is:  469-305-9365
+
+
+
 
 print("My", "name", "is", sep="_", end="*")
 print("Monty", "Python.", sep="*", end="*\n")
@@ -437,6 +442,54 @@ print(var, account_balance, client_name, sep=",       |   ")
 print(var1, account_balance2, client_name2, sep=",       |   ")
 print(var2, account_balance3, client_name3, sep=",       |   ")
 print(var3, account_balance3, client_name3, sep=",       |   ")
+
+
+
+
+
+
+var = 1
+var1 = 3
+var2 = 4
+var3 = 6
+account_balance = 1000.0
+account_balance1 = 234500.0
+account_balance2 = 95845.0
+account_balance3 = 500.0
+client_name = 'John Doe'
+client_name1 = 'Sara Loe'
+client_name2 = 'Matt Ketch'
+client_name3 = 'Jo MacTyer'
+print("var", "|", "account_balance", "|","client_name")
+print(var, account_balance, client_name, sep=",       |   ")
+print(var1, account_balance2, client_name2, sep=",       |   ")
+print(var2, account_balance3, client_name3, sep=",       |   ")
+print(var3, account_balance3, client_name3, sep=",       |   ")
+
+
+
+
+
+var = 1
+var1 = 3
+var2 = 4
+var3 = 6
+account_balance = 1000.0
+account_balance1 = 234500.0
+account_balance2 = 95845.0
+account_balance3 = 500.0
+client_name = 'John Doe'
+client_name1 = 'Sara Loe'
+client_name2 = 'Matt Ketch'
+client_name3 = 'Jo MacTyer'
+print("var", "account_balance","client_name", sep=",    |   ")
+print(var, account_balance, client_name, sep=",       |   ")
+print(var1, account_balance2, client_name2, sep=",       |   ")
+print(var2, account_balance3, client_name3, sep=",       |   ")
+print(var3, account_balance3, client_name3, sep=",       |   ")
+
+
+
 
 
 
