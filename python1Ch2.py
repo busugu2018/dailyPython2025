@@ -482,7 +482,7 @@ client_name = 'John Doe'
 client_name1 = 'Sara Loe'
 client_name2 = 'Matt Ketch'
 client_name3 = 'Jo MacTyer'
-print("var", "account_balance","client_name", sep=",    |   ")
+print("var", "account_balance","client_name", sep=",       |   ")
 print(var, account_balance, client_name, sep=",       |   ")
 print(var1, account_balance2, client_name2, sep=",       |   ")
 print(var2, account_balance3, client_name3, sep=",       |   ")
@@ -910,6 +910,14 @@ print(f"I will make ${salary} this year.")
 
 
 
+name = str(input("Enter your name: "))
+age = int(input("Enter your age: "))
+salary = int(input("Enter how much you wanna make a year: "))
+print("My naame is " + name)
+print(f"I am {age} years old.")
+print("I will make " + "$" + str(salary) + " this year.")
+
+
 
 
 # #2.6.4 The input() function – prohibited operations
@@ -926,11 +934,30 @@ print(anything, "to the power of 2 is", str(something));
 
 
 
+anything = int(input("Enter a number: "));
+something = anything ** 2.0;
+print(f"{anything}, to the power of 2 is, {something}");
+
+
+
+
+
 fullName = input("Enter your full name: ")
 age = int(input("Enter your age: "))
 address = input("Enter your address: ")
 salary = int(input("Enter your salary: "))
 print(fullName + " is " + str(age) + ", lives in " + address + ", and makes $" + str(salary))
+print(f"{fullName} is {age} lives in {address} and makes ${salary}")
+
+
+fullName = input("Enter your full name: ")
+age = int(input("Enter your age: "))
+address = input("Enter your address: ")
+salary = int(input("Enter your salary: "))
+print(fullName + " is " + str(age) + ", lives in " + address + ", and makes $" + str(salary) + ".")
+print(f"{fullName} is {age}, lives in {address}, and makes ${salary}.")
+
+
 
 
 
